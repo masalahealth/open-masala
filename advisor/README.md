@@ -6,6 +6,8 @@ It's two parts:
 1. **The [MCP server](../mcp-server/)** — serves the cited, ancestry-adjusted reference values as tools.
 2. **[`ADVISOR.md`](ADVISOR.md)** — the system instructions that make the assistant behave like a careful advisor (reports provenance tiers, honors overclaim guards, defers to clinicians).
 
+> 📖 **New here? Start with the full walkthrough → [Build your own health advisor](BUILD-YOUR-HEALTH-ADVISOR.md)** — how to pull your data from Epic/MyChart, build your health profile with Claude, and query it, plus the best practices.
+
 > ⚠️ Not a medical device, not clinical advice. It prepares you for a better conversation with your physician — it does not replace one.
 
 ## Setup (Claude Desktop, ~5 minutes)
