@@ -10,12 +10,17 @@ Run:  python3 scripts/build.py
 import csv
 import json
 import os
+import shutil
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
 SRC = os.path.join(DATA, "ancestry-reference-ranges.v0.json")
 CSV_OUT = os.path.join(DATA, "ancestry-reference-ranges.v0.csv")
 FHIR_OUT = os.path.join(DATA, "ancestry-reference-ranges.fhir.json")
+# The MCP server bundles a copy of the canonical JSON so an installed package is
+# self-contained; keep it in sync from the single source of truth (data/).
+PKG_DATA = os.path.join(ROOT, "mcp-server", "open_masala_mcp", "data",
+                        "ancestry-reference-ranges.v0.json")
 
 
 def _kv(d):
@@ -151,6 +156,9 @@ def main():
     n_fhir = build_fhir(data)
     print(f"wrote data/{os.path.basename(CSV_OUT)} ({n_csv} rows)")
     print(f"wrote data/{os.path.basename(FHIR_OUT)} ({n_fhir} ObservationDefinition resources)")
+    if os.path.isdir(os.path.dirname(PKG_DATA)):
+        shutil.copyfile(SRC, PKG_DATA)
+        print("synced mcp-server/open_masala_mcp/data/ (bundled copy)")
 
 
 if __name__ == "__main__":

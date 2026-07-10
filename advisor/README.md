@@ -10,18 +10,13 @@ It's two parts:
 
 ## Setup (Claude Desktop, ~5 minutes)
 
-1. **Install the MCP server:**
-   ```bash
-   git clone https://github.com/masalahealth/open-masala
-   cd open-masala && pip install "mcp[cli]"
-   ```
-2. **Add it to Claude Desktop** — edit `~/Library/Application Support/Claude/claude_desktop_config.json`:
+1. **Add the MCP server to Claude Desktop** — edit `~/Library/Application Support/Claude/claude_desktop_config.json` ([`uv`](https://docs.astral.sh/uv/) fetches it from PyPI, no clone):
    ```json
    {
      "mcpServers": {
        "open-masala": {
-         "command": "python3",
-         "args": ["/absolute/path/to/open-masala/mcp-server/server.py"]
+         "command": "uvx",
+         "args": ["open-masala-mcp"]
        }
      }
    }
@@ -36,7 +31,7 @@ The advisor will call `evaluate_value`, `get_reference`, and `screening_for` aga
 ## Works with
 
 - **Claude Desktop** — the setup above.
-- **Claude Code** — `claude mcp add open-masala -- python3 /abs/path/open-masala/mcp-server/server.py`, then drop `ADVISOR.md` into your project.
+- **Claude Code** — `claude mcp add open-masala -- uvx open-masala-mcp`, then drop `ADVISOR.md` into your project.
 - **Any MCP-capable client / your own agent** — point it at the server and use `ADVISOR.md` as the system prompt.
 
 ## Why it's built this way

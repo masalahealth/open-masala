@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-07-09/server.json",
+  "name": "io.github.masalahealth/open-masala",
+  "description": "Ancestry-adjusted health reference oracle — cited South Asian biomarker reference ranges and screening thresholds as MCP tools.",
+  "repository": {
+    "url": "https://github.com/masalahealth/open-masala",
+    "source": "github"
+  },
+  "version": "0.0.1",
+  "websiteUrl": "https://masalahealth.co/open-masala/",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "open-masala-mcp",
+      "version": "0.0.1",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

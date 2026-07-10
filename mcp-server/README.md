@@ -24,9 +24,17 @@ The server is a **stateless reference oracle**. Tools like `evaluate_value` take
 
 ## Install & run
 
+**No clone (recommended)** — [`uv`](https://docs.astral.sh/uv/) fetches and runs it from PyPI:
+
+```bash
+uvx open-masala-mcp
+```
+
+**From a source checkout:**
+
 ```bash
 pip install "mcp[cli]"
-python3 mcp-server/server.py        # stdio transport
+python3 mcp-server/server.py        # or: python -m open_masala_mcp.server
 ```
 
 ## Add to Claude Desktop
@@ -37,8 +45,8 @@ Edit `claude_desktop_config.json` (macOS: `~/Library/Application Support/Claude/
 {
   "mcpServers": {
     "open-masala": {
-      "command": "python3",
-      "args": ["/absolute/path/to/open-masala/mcp-server/server.py"]
+      "command": "uvx",
+      "args": ["open-masala-mcp"]
     }
   }
 }
@@ -46,10 +54,12 @@ Edit `claude_desktop_config.json` (macOS: `~/Library/Application Support/Claude/
 
 Restart Claude Desktop; the Open Masala tools appear in the tools menu. Now you can ask, e.g., *"I'm a South Asian man, 34, BMI 24 — what does Open Masala say?"* and Claude will call `evaluate_value` / `screening_for` and answer with cited, guard-respecting reference values.
 
+(From a checkout instead of PyPI, use `"command": "python3", "args": ["/absolute/path/to/open-masala/mcp-server/server.py"]`.)
+
 ## Add to Claude Code
 
 ```bash
-claude mcp add open-masala -- python3 /absolute/path/to/open-masala/mcp-server/server.py
+claude mcp add open-masala -- uvx open-masala-mcp
 ```
 
 ## Responsible-use contract
