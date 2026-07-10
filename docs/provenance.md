@@ -36,7 +36,7 @@ Freshness is handled as **surveillance**, not constant editing, because referenc
 
 The binding constraint is clinician-review throughput, not automation frequency — which is why the dataset is transparent about review state rather than implying a completeness it doesn't have.
 
-**Honest caveat (v0):** the upstream monthly surveillance and this published dataset are not yet automatically wired together — re-syncing a flagged upstream change into the canonical JSON is currently a manual, clinician-gated step. An automated re-extractor (upstream sources → canonical JSON) with a drift guard, plus a monthly cross-check that flags which published rows an upstream change affects, are on the near-term roadmap.
+**Honest caveat (v0):** re-syncing a flagged upstream change's *values* into the canonical JSON is a manual, clinician-gated step — full automated re-derivation of the editorial rows (which analytes, the SA-vs-general values, tiers, overclaim guards) is future work. But a reconcile / drift-guard, [`scripts/extract.py`](../scripts/extract.py), now cross-checks every published citation against the upstream evidence registry and the LOINC map, flagging any **retracted, superseded, or missing** source (run it — or `--check` — as the monthly guard). So a stale or retracted citation is caught, not silently shipped in the DOI'd / HF / PyPI copies.
 
 ## Limitations
 
