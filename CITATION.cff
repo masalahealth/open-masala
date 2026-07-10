@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it, and cite the primary sources named in each row."
+title: "Open Masala — ancestry-adjusted health reference ranges"
+abstract: >-
+  An open, machine-readable dataset of South Asian biomarker reference ranges and
+  screening thresholds, synthesized from published guidelines and studies. Each row
+  is LOINC-coded, evidence-graded, provenance-tiered, and cited to its source. A
+  curation/synthesis contribution — not a primary-data release.
+type: dataset
+version: "0.0.1"
+license: CC-BY-4.0
+url: "https://masalahealth.co/open-masala/"
+keywords:
+  - South Asian health
+  - ancestry-adjusted reference ranges
+  - cardiometabolic screening
+  - LOINC
+  - FHIR
+  - health data
+authors:
+  - name: "Masala Health"
+    website: "https://masalahealth.co"
+# DOI to be minted on first public (Zenodo) release:
+# doi: 10.5281/zenodo.XXXXXXX

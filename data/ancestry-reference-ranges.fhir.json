@@ -1,0 +1,1525 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "https://masalahealth.co/dataset",
+        "code": "open-masala-ancestry-reference-ranges",
+        "display": "Open Masala ancestry-adjusted reference ranges 0.0.1"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "bmi-overweight-category",
+        "code": {
+          "text": "BMI",
+          "coding": [
+            {
+              "system": "https://masalahealth.co/loinc-synthetic",
+              "code": "PRAJNA-BMI"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "reference_range"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "guideline-endorsed"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "Lower cutoffs reflect earlier metabolic risk, not a different disease; do not restate as 'South Asians are unhealthy at normal weight'."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "WHO Expert Consultation \u2014 appropriate BMI for Asian populations (Lancet 2004)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1016/S0140-6736(03)15268-3"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1016/S0140-6736(03)15268-3; PMID:14726171"
+              },
+              {
+                "url": "kind",
+                "valueString": "guideline"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "bmi-diabetes-screening-threshold",
+        "code": {
+          "text": "BMI (diabetes screening trigger)",
+          "coding": [
+            {
+              "system": "https://masalahealth.co/loinc-synthetic",
+              "code": "PRAJNA-BMI"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 30,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "screening_threshold"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "guideline-endorsed"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "A"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "A screening trigger is not a diagnosis; a positive trigger means 'test glucose', not 'has diabetes'."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Diagnosis and Classification of Diabetes: Standards of Care in Diabetes\u20142024"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.2337/dc24-S002"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.2337/dc24-S002"
+              },
+              {
+                "url": "kind",
+                "valueString": "guideline"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Optimum BMI cut points to screen Asian Americans for type 2 diabetes (Araneta/Kanaya, Diabetes Care 2015)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://pubmed.ncbi.nlm.nih.gov/25665815/"
+              },
+              {
+                "url": "ref",
+                "valueString": "PMID:25665815"
+              },
+              {
+                "url": "kind",
+                "valueString": "primaryStudy"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "diabetes-screening-age",
+        "code": {
+          "text": "Diabetes screening start age",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1558-6"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 30,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "screening_age"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "guideline-endorsed"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "A"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "ADA Standards of Care 2024"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.2337/dc24-S002"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.2337/dc24-S002"
+              },
+              {
+                "url": "kind",
+                "valueString": "guideline"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Araneta/Kanaya, Diabetes Care 2015"
+              },
+              {
+                "url": "url",
+                "valueString": "https://pubmed.ncbi.nlm.nih.gov/25665815/"
+              },
+              {
+                "url": "ref",
+                "valueString": "PMID:25665815"
+              },
+              {
+                "url": "kind",
+                "valueString": "primaryStudy"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "waist-central-obesity-male",
+        "code": {
+          "text": "Waist circumference (central obesity)",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "56115-9"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "gender": "male",
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "screening_threshold"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "guideline-endorsed"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "IDF consensus worldwide definition of the metabolic syndrome \u2014 ethnic-specific waist cutoffs"
+              },
+              {
+                "url": "url",
+                "valueString": "https://www.idf.org/e-library/consensus-statements/60-idfconsensus-worldwide-definitionof-the-metabolic-syndrome.html"
+              },
+              {
+                "url": "ref",
+                "valueString": ""
+              },
+              {
+                "url": "kind",
+                "valueString": "consensus"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "waist-central-obesity-female",
+        "code": {
+          "text": "Waist circumference (central obesity)",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "56115-9"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "gender": "female",
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "screening_threshold"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "guideline-endorsed"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "IDF consensus worldwide definition of the metabolic syndrome"
+              },
+              {
+                "url": "url",
+                "valueString": "https://www.idf.org/e-library/consensus-statements/60-idfconsensus-worldwide-definitionof-the-metabolic-syndrome.html"
+              },
+              {
+                "url": "ref",
+                "valueString": ""
+              },
+              {
+                "url": "kind",
+                "valueString": "consensus"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "waist-to-height-ratio",
+        "code": {
+          "text": "Waist-to-height ratio"
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "screening_threshold"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "study-derived"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "WtHR >=0.5 is a general adiposity rule; the South-Asian-specific claim is that it outperforms BMI here, not a distinct cutoff."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Comparison of obesity indices for CVD risk classification in South Asian adults \u2014 The CARRS Study (Patel et al., PLoS One 2017)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1371/journal.pone.0174251"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1371/journal.pone.0174251; PMID:28448582"
+              },
+              {
+                "url": "kind",
+                "valueString": "primaryStudy"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "hdl-low-female",
+        "code": {
+          "text": "HDL-C (low threshold)",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2085-9"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "gender": "female",
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "risk_flag"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "guideline-endorsed"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "IDF metabolic syndrome consensus (2006)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://www.idf.org/e-library/consensus-statements/60-idfconsensus-worldwide-definitionof-the-metabolic-syndrome.html"
+              },
+              {
+                "url": "ref",
+                "valueString": ""
+              },
+              {
+                "url": "kind",
+                "valueString": "consensus"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Prevention of ASCVD in South Asians \u2014 NLA clinical perspective (2021)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1016/j.jacl.2021.03.007"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1016/j.jacl.2021.03.007"
+              },
+              {
+                "url": "kind",
+                "valueString": "consensus"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "hdl-low-male",
+        "code": {
+          "text": "HDL-C (low threshold)",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2085-9"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "gender": "male",
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "risk_flag"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "guideline-endorsed"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "Male cut equals the general threshold; the SA-specific piece is the female cut and the pattern's weight, not this value."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "IDF metabolic syndrome consensus (2006)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://www.idf.org/e-library/consensus-statements/60-idfconsensus-worldwide-definitionof-the-metabolic-syndrome.html"
+              },
+              {
+                "url": "ref",
+                "valueString": ""
+              },
+              {
+                "url": "kind",
+                "valueString": "consensus"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "atherogenic-dyslipidemia-pattern",
+        "code": {
+          "text": "Atherogenic dyslipidemia (TG-high + HDL-low)",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2571-8"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "risk_flag"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "study-derived"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "A normal LDL-C does not rule out risk when TG is high and HDL low; do not present LDL-C as the sole lipid target for SA users."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "AHA Scientific Statement \u2014 ASCVD in South Asians (Volgman 2018)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1161/CIR.0000000000000580"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1161/CIR.0000000000000580"
+              },
+              {
+                "url": "kind",
+                "valueString": "guideline"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Lipid Association of India SA lipid targets (Enas 2013)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3868060/"
+              },
+              {
+                "url": "ref",
+                "valueString": "PMCID:PMC3868060"
+              },
+              {
+                "url": "kind",
+                "valueString": "consensus"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Risk factors for early MI in South Asians (INTERHEART, JAMA 2007)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1001/jama.297.3.286"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1001/jama.297.3.286"
+              },
+              {
+                "url": "kind",
+                "valueString": "primaryStudy"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "apob-preferred-marker",
+        "code": {
+          "text": "ApoB (preferred atherogenic marker)",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1884-6"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "range": {
+              "low": {
+                "value": 60,
+                "unit": "mg/dL"
+              },
+              "high": {
+                "value": 90,
+                "unit": "mg/dL"
+              }
+            },
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "reference_range"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "study-derived"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "The range is not SA-specific; the SA-specific claim is preference of ApoB over LDL-C, not a different cutoff."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "NLA \u2014 Prevention of ASCVD in South Asians (2021)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1016/j.jacl.2021.03.007"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1016/j.jacl.2021.03.007"
+              },
+              {
+                "url": "kind",
+                "valueString": "consensus"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "AHA Volgman 2018"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1161/CIR.0000000000000580"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1161/CIR.0000000000000580"
+              },
+              {
+                "url": "kind",
+                "valueString": "guideline"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "lpa-elevated-and-test-once",
+        "code": {
+          "text": "Lp(a)",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10835-7"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "risk_flag"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "guideline-endorsed"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "A"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "Do NOT claim South Asians universally run high Lp(a): MASALA (Huffman 2019) found no Lp(a)-atherosclerosis signal within the cohort. The rationale is 'genetically fixed + test-once is cheap', plus higher elevated-prevalence, not a proven SA outcome association."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "NLA 2024 Lp(a) focused update / AHA 2024 Lp(a) toolkit"
+              },
+              {
+                "url": "url",
+                "valueString": "https://professional.heart.org/en/-/media/PHD-Files/Education/AHA2024_Lpa_Toolkit_Healthcare_Professionals.pdf"
+              },
+              {
+                "url": "ref",
+                "valueString": ""
+              },
+              {
+                "url": "kind",
+                "valueString": "guideline"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "2018 AHA/ACC/Multi-Society Blood Cholesterol Guideline"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1161/CIR.0000000000000625"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1161/CIR.0000000000000625"
+              },
+              {
+                "url": "kind",
+                "valueString": "guideline"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "non-hdl-aggressive-target",
+        "code": {
+          "text": "Non-HDL-C (treatment target)",
+          "coding": [
+            {
+              "system": "https://masalahealth.co/loinc-synthetic",
+              "code": "PRAJNA-NONHDL"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "range": {
+              "high": {
+                "value": 130,
+                "unit": "mg/dL"
+              }
+            },
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "reference_range"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "study-derived"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "LAI targets are risk-stratified; do not present a single non-HDL cutoff as applying to all SA users."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Lipid Association of India SA lipid targets (Enas 2013)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3868060/"
+              },
+              {
+                "url": "ref",
+                "valueString": "PMCID:PMC3868060"
+              },
+              {
+                "url": "kind",
+                "valueString": "consensus"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "hba1c-under-read-caveat",
+        "code": {
+          "text": "HbA1c (interpretation caveat)",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "4548-4"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "interpretation_caveat"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "study-derived"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "HbA1c is not universally 'wrong' in SA users; the claim is that it can under- or over-read (iron deficiency, glycation rate), so borderline values warrant glucose confirmation."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Isolated HbA1c identifies a different T2D subgroup vs glucose in Asian Indians \u2014 CARRS & MASALA (Gujral 2019)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://pubmed.ncbi.nlm.nih.gov/31150721/"
+              },
+              {
+                "url": "ref",
+                "valueString": "PMID:31150721"
+              },
+              {
+                "url": "kind",
+                "valueString": "primaryStudy"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "ADA Standards of Care 2024"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.2337/dc24-S002"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.2337/dc24-S002"
+              },
+              {
+                "url": "kind",
+                "valueString": "guideline"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "cac-baseline-age",
+        "code": {
+          "text": "Coronary artery calcium \u2014 baseline discussion age",
+          "coding": [
+            {
+              "system": "https://masalahealth.co/loinc-synthetic",
+              "code": "PRAJNA-CAC"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 35,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "screening_age"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "guideline-endorsed"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "AHA Scientific Statement \u2014 ASCVD in South Asians (Volgman 2018)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1161/CIR.0000000000000580"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1161/CIR.0000000000000580"
+              },
+              {
+                "url": "kind",
+                "valueString": "guideline"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "vitamin-d-screening-emphasis",
+        "code": {
+          "text": "25-OH Vitamin D (screening emphasis)",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1989-3"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "range": {
+              "low": {
+                "value": 30,
+                "unit": "ng/mL"
+              },
+              "high": {
+                "value": 100,
+                "unit": "ng/mL"
+              }
+            },
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "reference_range"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "study-derived"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "The reference range is not SA-specific; the SA-relevant point is high deficiency prevalence, warranting screening \u2014 not a different normal range."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Endocrine Society \u2014 Evaluation, Treatment, and Prevention of Vitamin D Deficiency (2011)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1210/jc.2011-0385"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1210/jc.2011-0385"
+              },
+              {
+                "url": "kind",
+                "valueString": "guideline"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "fasting-insulin-optional-marker",
+        "code": {
+          "text": "Fasting insulin (optional early marker)",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1554-5"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "range": {
+              "low": {
+                "value": 2,
+                "unit": "uIU/mL"
+              },
+              "high": {
+                "value": 15,
+                "unit": "uIU/mL"
+              }
+            },
+            "age": {
+              "low": {
+                "value": 30,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "reference_range"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "study-derived"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "B"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "Explicitly NOT guideline-backed; present as an optional/exploratory marker, never as recommended screening."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "MASALA cardiometabolic profile / HOMA-IR vs MESA (Kanaya 2014)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://masalastudy.org/publications/"
+              },
+              {
+                "url": "ref",
+                "valueString": ""
+              },
+              {
+                "url": "kind",
+                "valueString": "primaryStudy"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "egfr-race-adjustment-deprecated",
+        "code": {
+          "text": "eGFR (race/ancestry adjustment)",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "33914-3"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "General population"
+              }
+            ],
+            "condition": "deprecated_adjustment"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "contested-deprecated"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "Do NOT ship an ancestry-adjusted eGFR. The 2021 refit removed the race term as a social-not-biological construct that delayed care. This row exists to instruct consumers to NOT stratify eGFR by ancestry."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "New Creatinine- and Cystatin C\u2013Based Equations without Race (CKD-EPI 2021, Inker et al., NEJM)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1056/NEJMoa2102953"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1056/NEJMoa2102953; PMID:34554658"
+              },
+              {
+                "url": "kind",
+                "valueString": "primaryStudy"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "prevent-risk-underestimate-caveat",
+        "code": {
+          "text": "10-year ASCVD risk (PREVENT)",
+          "coding": [
+            {
+              "system": "https://masalahealth.co/loinc-synthetic",
+              "code": "PRAJNA-PREVENT"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 30,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "interpretation_caveat"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "study-derived"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "There is no validated SA multiplier in PREVENT; do not invent one. State the limitation ('treat as a floor'), do not apply a made-up adjustment."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Development and Validation of the AHA PREVENT Equations (Circulation 2024)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1161/CIRCULATIONAHA.123.067626"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1161/CIRCULATIONAHA.123.067626"
+              },
+              {
+                "url": "kind",
+                "valueString": "guideline"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
