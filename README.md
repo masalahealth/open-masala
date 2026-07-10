@@ -3,6 +3,7 @@
 **The open, machine-readable, cited dataset of South Asian biomarker reference ranges and screening thresholds.**
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-93c19a.svg)](LICENSE)
+[![DOI](https://zenodo.org/badge/1296751900.svg)](https://zenodo.org/badge/latestdoi/1296751900)
 &nbsp;·&nbsp; 18 rows · every value cited · LOINC-coded · FHIR-shaped
 
 South Asians develop cardiovascular disease and type-2 diabetes earlier, at lower BMI, through different metabolic pathways. The screening thresholds that reflect this — WHO Asian BMI cutoffs, IDF waist limits, earlier diabetes and coronary-calcium screening, Lp(a) prompts — *exist*, but they're scattered across guideline PDFs and hundreds of papers. **Nobody has ever assembled them into one structured, cited, downloadable table.** This is that table.
