@@ -8,8 +8,17 @@ abstract: >-
   curation/synthesis contribution — not a primary-data release.
 type: dataset
 version: "0.0.1"
+doi: 10.5281/zenodo.21300418
 license: CC-BY-4.0
 url: "https://masalahealth.co/open-masala/"
+repository-code: "https://github.com/masalahealth/open-masala"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21300418
+    description: "Concept DOI — always resolves to the latest version"
+  - type: doi
+    value: 10.5281/zenodo.21300419
+    description: "Version DOI — v0.0.1"
 keywords:
   - South Asian health
   - ancestry-adjusted reference ranges

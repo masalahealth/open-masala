@@ -78,7 +78,7 @@ Beyond the raw data, this repo ships an **agent-callable** layer:
 
 ## How to cite
 
-See [`CITATION.cff`](CITATION.cff). A DOI-minted, versioned release (Zenodo) is on the roadmap; until then, cite the repo + version. **And cite the underlying primary sources** — each row names its guideline/study; those authors did the original work.
+See [`CITATION.cff`](CITATION.cff). Archived on Zenodo with a DOI: **[10.5281/zenodo.21300418](https://doi.org/10.5281/zenodo.21300418)** (concept DOI — always resolves to the latest version). **And cite the underlying primary sources** — each row names its guideline/study; those authors did the original work.
 
 ## Contributing
 
