@@ -22,6 +22,8 @@ South Asians develop cardiovascular disease and type-2 diabetes earlier, at lowe
 | [`data/ancestry-reference-ranges.v0.csv`](data/ancestry-reference-ranges.v0.csv) | CSV (flat) | ML / data science / Hugging Face. Flattens to Parquet in one line. |
 | [`data/ancestry-reference-ranges.fhir.json`](data/ancestry-reference-ranges.fhir.json) | FHIR R4 Bundle | Health-system engineers — `ObservationDefinition.qualifiedInterval` per row. |
 | [`scripts/build.py`](scripts/build.py) | Python (stdlib) | Regenerates CSV + FHIR from the canonical JSON. |
+| [`mcp-server/`](mcp-server/) | MCP server | Query the dataset as tool calls from any agent (Claude Desktop, Claude Code). |
+| [`advisor/`](advisor/) | Prompt + guide | Run it as a personal, ancestry-aware health advisor on your own machine. |
 | [`docs/schema.md`](docs/schema.md) | Markdown | Full data dictionary + FHIR/LOINC mapping. |
 | [`docs/provenance.md`](docs/provenance.md) | Markdown | How it was built, and how it stays current. |
 | [`docs/governance.md`](docs/governance.md) | Markdown | Why we don't ship primary data; the eGFR/race lesson. |
@@ -64,6 +66,13 @@ python3 -c "import pandas as pd; pd.read_csv('data/ancestry-reference-ranges.v0.
 ```
 
 FHIR consumers: load the Bundle; each entry is an `ObservationDefinition` whose `qualifiedInterval` carries the population (`appliesTo`), `gender`, `age`, and numeric `range`. Provenance tier, evidence grade, overclaim guard, and sources ride on extensions (R4 `ObservationDefinition` has no native citation slot). See [`docs/schema.md`](docs/schema.md).
+
+## Use it as a personal health advisor
+
+Beyond the raw data, this repo ships an **agent-callable** layer:
+
+- **[`mcp-server/`](mcp-server/)** — an MCP server that exposes the dataset as tools (`evaluate_value`, `get_reference`, `screening_for`, …). Add it to Claude Desktop or Claude Code and ask, *"I'm a South Asian man, 34, BMI 24 — what does this mean?"* — you get a cited, ancestry-adjusted answer instead of a guess. It's a **stateless reference oracle**: it holds no user data.
+- **[`advisor/`](advisor/)** — system instructions that turn the MCP server into a careful, ancestry-aware health advisor that reviews your labs, honors the overclaim guards, and prepares you for a sharper conversation with your doctor. Your data stays on your machine.
 
 ## How to cite
 
