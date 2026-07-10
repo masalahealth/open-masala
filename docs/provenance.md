@@ -30,11 +30,13 @@ Numbers and facts — a threshold value, a reference interval — are **not copy
 
 Freshness is handled as **surveillance**, not constant editing, because reference values change only when a guideline changes:
 
-- **Monthly (automated):** detect guideline-page changes, catch retractions and dead links, and surface new South-Asian literature as *candidates* — never auto-merged.
-- **Per-release (clinician-gated, event-driven):** when surveillance flags a real change, a clinician reviews, values are updated, the version is bumped, and the CSV + FHIR exports are regenerated from the canonical JSON. This is the cadence external consumers actually see.
+- **Monthly (automated, upstream):** a monthly job on the underlying evidence base detects guideline-page changes, catches retractions and dead links, and surfaces new South-Asian literature as *candidates* — never auto-merged.
+- **Per-release (clinician-gated, event-driven):** when surveillance flags a change that affects a published row, a clinician reviews, values are updated, the version is bumped, and the CSV + FHIR exports are regenerated from the canonical JSON. This is the cadence external consumers actually see.
 - **Out-of-band:** a retraction or a safety-relevant guideline reversal is not held for the monthly tick.
 
 The binding constraint is clinician-review throughput, not automation frequency — which is why the dataset is transparent about review state rather than implying a completeness it doesn't have.
+
+**Honest caveat (v0):** the upstream monthly surveillance and this published dataset are not yet automatically wired together — re-syncing a flagged upstream change into the canonical JSON is currently a manual, clinician-gated step. An automated re-extractor (upstream sources → canonical JSON) with a drift guard, plus a monthly cross-check that flags which published rows an upstream change affects, are on the near-term roadmap.
 
 ## Limitations
 
