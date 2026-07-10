@@ -1,0 +1,35 @@
+{
+  "title": "Open Masala — Ancestry-Adjusted Health Reference Ranges",
+  "upload_type": "dataset",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "description": "The open, machine-readable, cited dataset of South Asian biomarker reference ranges and screening thresholds. South-Asian-specific cutoffs (WHO Asian BMI, IDF waist, earlier diabetes and coronary-calcium screening, Lp(a) prompts) exist across guideline PDFs and hundreds of papers but have never been assembled into one structured, cited table. This dataset does that: each row is LOINC-coded, evidence-graded, provenance-tiered, and linked to its source guideline or study, and pairs the South Asian value with the general-population value it replaces. Ships as canonical JSON, flat CSV, and a FHIR R4 Bundle of ObservationDefinition resources. A curation and synthesis of published sources — not a primary-data release, and not a medical device.",
+  "keywords": [
+    "South Asian health",
+    "ancestry-adjusted reference ranges",
+    "cardiometabolic screening",
+    "biomarker reference ranges",
+    "LOINC",
+    "FHIR",
+    "open health data",
+    "clinical decision support"
+  ],
+  "creators": [
+    {
+      "name": "Masala Health"
+    }
+  ],
+  "notes": "Not a medical device or clinical advice. Reference ranges vary by lab and method. v0 release — not yet clinician-reviewed for clinical use. Please also cite the primary sources named in each dataset row.",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/masalahealth/open-masala",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://masalahealth.co/open-masala/",
+      "relation": "isDocumentedBy",
+      "scheme": "url"
+    }
+  ]
+}

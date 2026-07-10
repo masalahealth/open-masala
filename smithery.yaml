@@ -1,0 +1,22 @@
+# Smithery registry manifest for the Open Masala MCP server.
+# https://smithery.ai — the main MCP server registry.
+#
+# This is a LOCAL (stdio) server: the user runs it on their own machine; it does
+# no inference and holds no user data, so there is nothing for a registry to host
+# beyond advertising the install command. Verify field names against current
+# Smithery docs before publishing (their schema evolves).
+
+startCommand:
+  type: stdio
+  # No configuration needed — the server reads the bundled dataset.
+  configSchema:
+    type: object
+    properties: {}
+    required: []
+  commandFunction: |-
+    (config) => ({
+      command: "python3",
+      args: ["mcp-server/server.py"]
+    })
+
+# Prerequisite for the user: pip install "mcp[cli]"
