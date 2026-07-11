@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "open-masala-mcp"
-version = "0.0.1"
+version = "0.0.2"
 description = "MCP server for Open Masala — ancestry-adjusted health reference ranges (South Asian biomarker cutoffs, cited)."
 readme = "README.md"
 requires-python = ">=3.10"
