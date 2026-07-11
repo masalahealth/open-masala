@@ -1,7 +1,7 @@
 """Open Masala MCP server — ancestry-adjusted health reference oracle."""
 
 __all__ = ["main"]
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 
 
 def __getattr__(name):

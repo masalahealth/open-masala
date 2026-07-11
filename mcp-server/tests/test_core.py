@@ -20,8 +20,10 @@ def test_bmi_returns_category_naming_sa_cutoff():
     assert "23" in r["explanation"]               # names the SA overweight cutoff
 
 def test_bmi_normal_and_obese_bands():
+    # WHO 2004 Asian action points: overweight >=23, obese >=27.5.
     assert core.evaluate_value("BMI", 22)["category"] == "normal"
-    assert core.evaluate_value("BMI", 26)["category"] == "obese"
+    assert core.evaluate_value("BMI", 26)["category"] == "overweight"
+    assert core.evaluate_value("BMI", 28)["category"] == "obese"
 
 def test_lpa_single_elevated_threshold_flags():
     r = core.evaluate_value("Lp(a)", 50)          # elevated_at 50 → treated as >=

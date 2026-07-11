@@ -1,7 +1,7 @@
 {
   "dataset": "masala-ancestry-reference-ranges",
-  "version": "0.0.1",
-  "status": "v0-illustrative-not-clinician-reviewed",
+  "version": "0.1.0",
+  "status": "v0.1-expansion-in-progress; new rows review_status:proposed pending clinician sign-off",
   "population_scope": "south_asian",
   "generated_from": [
     "ios/MasalaHealth/Resources/loinc.yaml",
@@ -18,18 +18,33 @@
       "unit": "kg/m2",
       "population": "south_asian",
       "sex": "any",
-      "age": { "min": 18, "max": null },
+      "age": {
+        "min": 18,
+        "max": null
+      },
       "measure_type": "reference_range",
-      "sa_value": { "overweight_at": 23, "obese_at": 25 },
-      "general_value": { "overweight_at": 25, "obese_at": 30 },
+      "sa_value": {
+        "overweight_at": 23,
+        "obese_at": 27.5
+      },
+      "general_value": {
+        "overweight_at": 25,
+        "obese_at": 30
+      },
       "direction_of_risk": "high",
       "provenance_tier": "guideline-endorsed",
       "evidence_grade": null,
       "sources": [
-        { "label": "WHO Expert Consultation — appropriate BMI for Asian populations (Lancet 2004)", "url": "https://doi.org/10.1016/S0140-6736(03)15268-3", "ref": "DOI:10.1016/S0140-6736(03)15268-3; PMID:14726171", "kind": "guideline", "in_registry": true }
+        {
+          "label": "WHO Expert Consultation — appropriate BMI for Asian populations (Lancet 2004)",
+          "url": "https://doi.org/10.1016/S0140-6736(03)15268-3",
+          "ref": "DOI:10.1016/S0140-6736(03)15268-3; PMID:14726171",
+          "kind": "guideline",
+          "in_registry": true
+        }
       ],
       "overclaim_guard": "Lower cutoffs reflect earlier metabolic risk, not a different disease; do not restate as 'South Asians are unhealthy at normal weight'.",
-      "notes": "Encoded in loinc.yaml as PRAJNA-BMI ref_high 23. Source in evidence registry as who-asian-bmi-2004 (grade A, approved)."
+      "notes": "Encoded in loinc.yaml as PRAJNA-BMI ref_high 23. Source in evidence registry as who-asian-bmi-2004 (grade A, approved). obese_at corrected 25->27.5 (WHO 2004 Asian high-risk action point; 2026-07-11)."
     },
     {
       "id": "bmi-diabetes-screening-threshold",
@@ -38,16 +53,37 @@
       "unit": "kg/m2",
       "population": "south_asian",
       "sex": "any",
-      "age": { "min": 30, "max": null },
+      "age": {
+        "min": 30,
+        "max": null
+      },
       "measure_type": "screening_threshold",
-      "sa_value": { "comparator": ">=", "value": 23 },
-      "general_value": { "comparator": ">=", "value": 25 },
+      "sa_value": {
+        "comparator": ">=",
+        "value": 23
+      },
+      "general_value": {
+        "comparator": ">=",
+        "value": 25
+      },
       "direction_of_risk": "high",
       "provenance_tier": "guideline-endorsed",
       "evidence_grade": "A",
       "sources": [
-        { "label": "Diagnosis and Classification of Diabetes: Standards of Care in Diabetes—2024", "url": "https://doi.org/10.2337/dc24-S002", "ref": "DOI:10.2337/dc24-S002", "kind": "guideline", "in_registry": true },
-        { "label": "Optimum BMI cut points to screen Asian Americans for type 2 diabetes (Araneta/Kanaya, Diabetes Care 2015)", "url": "https://pubmed.ncbi.nlm.nih.gov/25665815/", "ref": "PMID:25665815", "kind": "primaryStudy", "in_registry": true }
+        {
+          "label": "Diagnosis and Classification of Diabetes: Standards of Care in Diabetes—2024",
+          "url": "https://doi.org/10.2337/dc24-S002",
+          "ref": "DOI:10.2337/dc24-S002",
+          "kind": "guideline",
+          "in_registry": true
+        },
+        {
+          "label": "Optimum BMI cut points to screen Asian Americans for type 2 diabetes (Araneta/Kanaya, Diabetes Care 2015)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25665815/",
+          "ref": "PMID:25665815",
+          "kind": "primaryStudy",
+          "in_registry": true
+        }
       ],
       "overclaim_guard": "A screening trigger is not a diagnosis; a positive trigger means 'test glucose', not 'has diabetes'.",
       "notes": "SouthAsianScreeningPack.diabetesScreenBMI23 (v2024.2), fires from age 30."
@@ -59,16 +95,37 @@
       "unit": "year",
       "population": "south_asian",
       "sex": "any",
-      "age": { "min": 30, "max": null },
+      "age": {
+        "min": 30,
+        "max": null
+      },
       "measure_type": "screening_age",
-      "sa_value": { "comparator": ">=", "value": 30 },
-      "general_value": { "comparator": ">=", "value": 35 },
+      "sa_value": {
+        "comparator": ">=",
+        "value": 30
+      },
+      "general_value": {
+        "comparator": ">=",
+        "value": 35
+      },
       "direction_of_risk": "n/a",
       "provenance_tier": "guideline-endorsed",
       "evidence_grade": "A",
       "sources": [
-        { "label": "ADA Standards of Care 2024", "url": "https://doi.org/10.2337/dc24-S002", "ref": "DOI:10.2337/dc24-S002", "kind": "guideline", "in_registry": true },
-        { "label": "Araneta/Kanaya, Diabetes Care 2015", "url": "https://pubmed.ncbi.nlm.nih.gov/25665815/", "ref": "PMID:25665815", "kind": "primaryStudy", "in_registry": true }
+        {
+          "label": "ADA Standards of Care 2024",
+          "url": "https://doi.org/10.2337/dc24-S002",
+          "ref": "DOI:10.2337/dc24-S002",
+          "kind": "guideline",
+          "in_registry": true
+        },
+        {
+          "label": "Araneta/Kanaya, Diabetes Care 2015",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25665815/",
+          "ref": "PMID:25665815",
+          "kind": "primaryStudy",
+          "in_registry": true
+        }
       ],
       "overclaim_guard": null,
       "notes": "South Asians develop dysglycaemia ~a decade earlier; screen earlier."
@@ -80,15 +137,30 @@
       "unit": "cm",
       "population": "south_asian",
       "sex": "male",
-      "age": { "min": 18, "max": null },
+      "age": {
+        "min": 18,
+        "max": null
+      },
       "measure_type": "screening_threshold",
-      "sa_value": { "comparator": ">=", "value": 90 },
-      "general_value": { "comparator": ">=", "value": 102 },
+      "sa_value": {
+        "comparator": ">=",
+        "value": 90
+      },
+      "general_value": {
+        "comparator": ">=",
+        "value": 102
+      },
       "direction_of_risk": "high",
       "provenance_tier": "guideline-endorsed",
       "evidence_grade": null,
       "sources": [
-        { "label": "IDF consensus worldwide definition of the metabolic syndrome — ethnic-specific waist cutoffs", "url": "https://www.idf.org/e-library/consensus-statements/60-idfconsensus-worldwide-definitionof-the-metabolic-syndrome.html", "ref": null, "kind": "consensus", "in_registry": true }
+        {
+          "label": "IDF consensus worldwide definition of the metabolic syndrome — ethnic-specific waist cutoffs",
+          "url": "https://www.idf.org/e-library/consensus-statements/60-idfconsensus-worldwide-definitionof-the-metabolic-syndrome.html",
+          "ref": null,
+          "kind": "consensus",
+          "in_registry": true
+        }
       ],
       "overclaim_guard": null,
       "notes": "loinc.yaml 56115-9 ref_high 90 encodes the male SA cut."
@@ -100,15 +172,30 @@
       "unit": "cm",
       "population": "south_asian",
       "sex": "female",
-      "age": { "min": 18, "max": null },
+      "age": {
+        "min": 18,
+        "max": null
+      },
       "measure_type": "screening_threshold",
-      "sa_value": { "comparator": ">=", "value": 80 },
-      "general_value": { "comparator": ">=", "value": 88 },
+      "sa_value": {
+        "comparator": ">=",
+        "value": 80
+      },
+      "general_value": {
+        "comparator": ">=",
+        "value": 88
+      },
       "direction_of_risk": "high",
       "provenance_tier": "guideline-endorsed",
       "evidence_grade": null,
       "sources": [
-        { "label": "IDF consensus worldwide definition of the metabolic syndrome", "url": "https://www.idf.org/e-library/consensus-statements/60-idfconsensus-worldwide-definitionof-the-metabolic-syndrome.html", "ref": null, "kind": "consensus", "in_registry": true }
+        {
+          "label": "IDF consensus worldwide definition of the metabolic syndrome",
+          "url": "https://www.idf.org/e-library/consensus-statements/60-idfconsensus-worldwide-definitionof-the-metabolic-syndrome.html",
+          "ref": null,
+          "kind": "consensus",
+          "in_registry": true
+        }
       ],
       "overclaim_guard": null,
       "notes": "SouthAsianScreeningPack.isCentralObesity female cut = 80 cm."
@@ -120,15 +207,30 @@
       "unit": "ratio",
       "population": "south_asian",
       "sex": "any",
-      "age": { "min": 18, "max": null },
+      "age": {
+        "min": 18,
+        "max": null
+      },
       "measure_type": "screening_threshold",
-      "sa_value": { "comparator": ">=", "value": 0.5 },
-      "general_value": { "comparator": ">=", "value": 0.5 },
+      "sa_value": {
+        "comparator": ">=",
+        "value": 0.5
+      },
+      "general_value": {
+        "comparator": ">=",
+        "value": 0.5
+      },
       "direction_of_risk": "high",
       "provenance_tier": "study-derived",
       "evidence_grade": null,
       "sources": [
-        { "label": "Comparison of obesity indices for CVD risk classification in South Asian adults — The CARRS Study (Patel et al., PLoS One 2017)", "url": "https://doi.org/10.1371/journal.pone.0174251", "ref": "DOI:10.1371/journal.pone.0174251; PMID:28448582", "kind": "primaryStudy", "in_registry": true }
+        {
+          "label": "Comparison of obesity indices for CVD risk classification in South Asian adults — The CARRS Study (Patel et al., PLoS One 2017)",
+          "url": "https://doi.org/10.1371/journal.pone.0174251",
+          "ref": "DOI:10.1371/journal.pone.0174251; PMID:28448582",
+          "kind": "primaryStudy",
+          "in_registry": true
+        }
       ],
       "overclaim_guard": "WtHR >=0.5 is a general adiposity rule; the South-Asian-specific claim is that it outperforms BMI here, not a distinct cutoff.",
       "notes": "Used in SouthAsianScreeningPack.isCentralObesity as a fallback when waist+height on file. Source in evidence registry as carrs-patel-2017 (review_status: proposed — awaiting clinician sign-off)."
@@ -140,16 +242,37 @@
       "unit": "mg/dL",
       "population": "south_asian",
       "sex": "female",
-      "age": { "min": 18, "max": null },
+      "age": {
+        "min": 18,
+        "max": null
+      },
       "measure_type": "risk_flag",
-      "sa_value": { "comparator": "<", "value": 50 },
-      "general_value": { "comparator": "<", "value": 40 },
+      "sa_value": {
+        "comparator": "<",
+        "value": 50
+      },
+      "general_value": {
+        "comparator": "<",
+        "value": 40
+      },
       "direction_of_risk": "low",
       "provenance_tier": "guideline-endorsed",
       "evidence_grade": null,
       "sources": [
-        { "label": "IDF metabolic syndrome consensus (2006)", "url": "https://www.idf.org/e-library/consensus-statements/60-idfconsensus-worldwide-definitionof-the-metabolic-syndrome.html", "ref": null, "kind": "consensus", "in_registry": true },
-        { "label": "Prevention of ASCVD in South Asians — NLA clinical perspective (2021)", "url": "https://doi.org/10.1016/j.jacl.2021.03.007", "ref": "DOI:10.1016/j.jacl.2021.03.007", "kind": "consensus", "in_registry": true }
+        {
+          "label": "IDF metabolic syndrome consensus (2006)",
+          "url": "https://www.idf.org/e-library/consensus-statements/60-idfconsensus-worldwide-definitionof-the-metabolic-syndrome.html",
+          "ref": null,
+          "kind": "consensus",
+          "in_registry": true
+        },
+        {
+          "label": "Prevention of ASCVD in South Asians — NLA clinical perspective (2021)",
+          "url": "https://doi.org/10.1016/j.jacl.2021.03.007",
+          "ref": "DOI:10.1016/j.jacl.2021.03.007",
+          "kind": "consensus",
+          "in_registry": true
+        }
       ],
       "overclaim_guard": null,
       "notes": "IDF sex-specific low-HDL cut; women flagged at <50."
@@ -161,15 +284,30 @@
       "unit": "mg/dL",
       "population": "south_asian",
       "sex": "male",
-      "age": { "min": 18, "max": null },
+      "age": {
+        "min": 18,
+        "max": null
+      },
       "measure_type": "risk_flag",
-      "sa_value": { "comparator": "<", "value": 40 },
-      "general_value": { "comparator": "<", "value": 40 },
+      "sa_value": {
+        "comparator": "<",
+        "value": 40
+      },
+      "general_value": {
+        "comparator": "<",
+        "value": 40
+      },
       "direction_of_risk": "low",
       "provenance_tier": "guideline-endorsed",
       "evidence_grade": null,
       "sources": [
-        { "label": "IDF metabolic syndrome consensus (2006)", "url": "https://www.idf.org/e-library/consensus-statements/60-idfconsensus-worldwide-definitionof-the-metabolic-syndrome.html", "ref": null, "kind": "consensus", "in_registry": true }
+        {
+          "label": "IDF metabolic syndrome consensus (2006)",
+          "url": "https://www.idf.org/e-library/consensus-statements/60-idfconsensus-worldwide-definitionof-the-metabolic-syndrome.html",
+          "ref": null,
+          "kind": "consensus",
+          "in_registry": true
+        }
       ],
       "overclaim_guard": "Male cut equals the general threshold; the SA-specific piece is the female cut and the pattern's weight, not this value.",
       "notes": "Included for completeness so the male/female contrast is explicit."
@@ -181,17 +319,41 @@
       "unit": "composite",
       "population": "south_asian",
       "sex": "any",
-      "age": { "min": 18, "max": null },
+      "age": {
+        "min": 18,
+        "max": null
+      },
       "measure_type": "risk_flag",
-      "sa_value": { "triglycerides_mg_dl": ">=150", "with_low_hdl": true },
+      "sa_value": {
+        "triglycerides_mg_dl": ">=150",
+        "with_low_hdl": true
+      },
       "general_value": null,
       "direction_of_risk": "high",
       "provenance_tier": "study-derived",
       "evidence_grade": null,
       "sources": [
-        { "label": "AHA Scientific Statement — ASCVD in South Asians (Volgman 2018)", "url": "https://doi.org/10.1161/CIR.0000000000000580", "ref": "DOI:10.1161/CIR.0000000000000580", "kind": "guideline", "in_registry": true },
-        { "label": "Lipid Association of India SA lipid targets (Enas 2013)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3868060/", "ref": "PMCID:PMC3868060", "kind": "consensus", "in_registry": true },
-        { "label": "Risk factors for early MI in South Asians (INTERHEART, JAMA 2007)", "url": "https://doi.org/10.1001/jama.297.3.286", "ref": "DOI:10.1001/jama.297.3.286", "kind": "primaryStudy", "in_registry": true }
+        {
+          "label": "AHA Scientific Statement — ASCVD in South Asians (Volgman 2018)",
+          "url": "https://doi.org/10.1161/CIR.0000000000000580",
+          "ref": "DOI:10.1161/CIR.0000000000000580",
+          "kind": "guideline",
+          "in_registry": true
+        },
+        {
+          "label": "Lipid Association of India SA lipid targets (Enas 2013)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3868060/",
+          "ref": "PMCID:PMC3868060",
+          "kind": "consensus",
+          "in_registry": true
+        },
+        {
+          "label": "Risk factors for early MI in South Asians (INTERHEART, JAMA 2007)",
+          "url": "https://doi.org/10.1001/jama.297.3.286",
+          "ref": "DOI:10.1001/jama.297.3.286",
+          "kind": "primaryStudy",
+          "in_registry": true
+        }
       ],
       "overclaim_guard": "A normal LDL-C does not rule out risk when TG is high and HDL low; do not present LDL-C as the sole lipid target for SA users.",
       "notes": "The SA-characteristic pattern (small-dense LDL, high ApoB/ApoA-I) that drives risk at normal LDL-C. Component values match general thresholds; the differentiation is the emphasis."
@@ -203,16 +365,37 @@
       "unit": "mg/dL",
       "population": "south_asian",
       "sex": "any",
-      "age": { "min": 18, "max": null },
+      "age": {
+        "min": 18,
+        "max": null
+      },
       "measure_type": "reference_range",
-      "sa_value": { "low": 60, "high": 90 },
-      "general_value": { "low": 60, "high": 90 },
+      "sa_value": {
+        "low": 60,
+        "high": 90
+      },
+      "general_value": {
+        "low": 60,
+        "high": 90
+      },
       "direction_of_risk": "high",
       "provenance_tier": "study-derived",
       "evidence_grade": null,
       "sources": [
-        { "label": "NLA — Prevention of ASCVD in South Asians (2021)", "url": "https://doi.org/10.1016/j.jacl.2021.03.007", "ref": "DOI:10.1016/j.jacl.2021.03.007", "kind": "consensus", "in_registry": true },
-        { "label": "AHA Volgman 2018", "url": "https://doi.org/10.1161/CIR.0000000000000580", "ref": "DOI:10.1161/CIR.0000000000000580", "kind": "guideline", "in_registry": true }
+        {
+          "label": "NLA — Prevention of ASCVD in South Asians (2021)",
+          "url": "https://doi.org/10.1016/j.jacl.2021.03.007",
+          "ref": "DOI:10.1016/j.jacl.2021.03.007",
+          "kind": "consensus",
+          "in_registry": true
+        },
+        {
+          "label": "AHA Volgman 2018",
+          "url": "https://doi.org/10.1161/CIR.0000000000000580",
+          "ref": "DOI:10.1161/CIR.0000000000000580",
+          "kind": "guideline",
+          "in_registry": true
+        }
       ],
       "overclaim_guard": "The range is not SA-specific; the SA-specific claim is preference of ApoB over LDL-C, not a different cutoff.",
       "notes": "SouthAsianScreeningPack.apobPreferred nudges ApoB when a lipid panel exists but ApoB doesn't."
@@ -224,16 +407,37 @@
       "unit": "mg/dL",
       "population": "south_asian",
       "sex": "any",
-      "age": { "min": 18, "max": null },
+      "age": {
+        "min": 18,
+        "max": null
+      },
       "measure_type": "risk_flag",
-      "sa_value": { "elevated_at": 50, "test_frequency": "once_in_adulthood" },
-      "general_value": { "elevated_at": 50, "test_frequency": "once_in_adulthood" },
+      "sa_value": {
+        "elevated_at": 50,
+        "test_frequency": "once_in_adulthood"
+      },
+      "general_value": {
+        "elevated_at": 50,
+        "test_frequency": "once_in_adulthood"
+      },
       "direction_of_risk": "high",
       "provenance_tier": "guideline-endorsed",
       "evidence_grade": "A",
       "sources": [
-        { "label": "NLA 2024 Lp(a) focused update / AHA 2024 Lp(a) toolkit", "url": "https://professional.heart.org/en/-/media/PHD-Files/Education/AHA2024_Lpa_Toolkit_Healthcare_Professionals.pdf", "ref": null, "kind": "guideline", "in_registry": true },
-        { "label": "2018 AHA/ACC/Multi-Society Blood Cholesterol Guideline", "url": "https://doi.org/10.1161/CIR.0000000000000625", "ref": "DOI:10.1161/CIR.0000000000000625", "kind": "guideline", "in_registry": true }
+        {
+          "label": "NLA 2024 Lp(a) focused update / AHA 2024 Lp(a) toolkit",
+          "url": "https://professional.heart.org/en/-/media/PHD-Files/Education/AHA2024_Lpa_Toolkit_Healthcare_Professionals.pdf",
+          "ref": null,
+          "kind": "guideline",
+          "in_registry": true
+        },
+        {
+          "label": "2018 AHA/ACC/Multi-Society Blood Cholesterol Guideline",
+          "url": "https://doi.org/10.1161/CIR.0000000000000625",
+          "ref": "DOI:10.1161/CIR.0000000000000625",
+          "kind": "guideline",
+          "in_registry": true
+        }
       ],
       "overclaim_guard": "Do NOT claim South Asians universally run high Lp(a): MASALA (Huffman 2019) found no Lp(a)-atherosclerosis signal within the cohort. The rationale is 'genetically fixed + test-once is cheap', plus higher elevated-prevalence, not a proven SA outcome association.",
       "notes": "The 'test once' guidance is guideline-endorsed and not SA-specific; it appears here because it is under-done in this population. loinc.yaml Lp(a) mass ref_high 30 mg/dL, molar 43583-7 ref_high 75 nmol/L."
@@ -245,15 +449,29 @@
       "unit": "mg/dL",
       "population": "south_asian",
       "sex": "any",
-      "age": { "min": 18, "max": null },
+      "age": {
+        "min": 18,
+        "max": null
+      },
       "measure_type": "reference_range",
-      "sa_value": { "high": 130, "note": "LAI recommends more aggressive non-HDL targets by risk stratum" },
-      "general_value": { "high": 130 },
+      "sa_value": {
+        "high": 130,
+        "note": "LAI recommends more aggressive non-HDL targets by risk stratum"
+      },
+      "general_value": {
+        "high": 130
+      },
       "direction_of_risk": "high",
       "provenance_tier": "study-derived",
       "evidence_grade": null,
       "sources": [
-        { "label": "Lipid Association of India SA lipid targets (Enas 2013)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3868060/", "ref": "PMCID:PMC3868060", "kind": "consensus", "in_registry": true }
+        {
+          "label": "Lipid Association of India SA lipid targets (Enas 2013)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3868060/",
+          "ref": "PMCID:PMC3868060",
+          "kind": "consensus",
+          "in_registry": true
+        }
       ],
       "overclaim_guard": "LAI targets are risk-stratified; do not present a single non-HDL cutoff as applying to all SA users.",
       "notes": "Default non-HDL ref_high 130 from loinc.yaml; SA-specific aggressiveness is stratum-dependent — represented qualitatively pending clinician review."
@@ -265,16 +483,37 @@
       "unit": "%",
       "population": "south_asian",
       "sex": "any",
-      "age": { "min": 18, "max": null },
+      "age": {
+        "min": 18,
+        "max": null
+      },
       "measure_type": "interpretation_caveat",
-      "sa_value": { "confirm_when": "5.7-6.4", "confirm_with": "fasting glucose or OGTT" },
-      "general_value": { "reference_range_low": 4.0, "reference_range_high": 5.6 },
+      "sa_value": {
+        "confirm_when": "5.7-6.4",
+        "confirm_with": "fasting glucose or OGTT"
+      },
+      "general_value": {
+        "reference_range_low": 4.0,
+        "reference_range_high": 5.6
+      },
       "direction_of_risk": "high",
       "provenance_tier": "study-derived",
       "evidence_grade": null,
       "sources": [
-        { "label": "Isolated HbA1c identifies a different T2D subgroup vs glucose in Asian Indians — CARRS & MASALA (Gujral 2019)", "url": "https://pubmed.ncbi.nlm.nih.gov/31150721/", "ref": "PMID:31150721", "kind": "primaryStudy", "in_registry": true },
-        { "label": "ADA Standards of Care 2024", "url": "https://doi.org/10.2337/dc24-S002", "ref": "DOI:10.2337/dc24-S002", "kind": "guideline", "in_registry": true }
+        {
+          "label": "Isolated HbA1c identifies a different T2D subgroup vs glucose in Asian Indians — CARRS & MASALA (Gujral 2019)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/31150721/",
+          "ref": "PMID:31150721",
+          "kind": "primaryStudy",
+          "in_registry": true
+        },
+        {
+          "label": "ADA Standards of Care 2024",
+          "url": "https://doi.org/10.2337/dc24-S002",
+          "ref": "DOI:10.2337/dc24-S002",
+          "kind": "guideline",
+          "in_registry": true
+        }
       ],
       "overclaim_guard": "HbA1c is not universally 'wrong' in SA users; the claim is that it can under- or over-read (iron deficiency, glycation rate), so borderline values warrant glucose confirmation.",
       "notes": "The reference range is not changed; this is an interpretation flag on borderline values."
@@ -286,15 +525,30 @@
       "unit": "year",
       "population": "south_asian",
       "sex": "any",
-      "age": { "min": 35, "max": null },
+      "age": {
+        "min": 35,
+        "max": null
+      },
       "measure_type": "screening_age",
-      "sa_value": { "comparator": ">=", "value": 35 },
-      "general_value": { "comparator": ">=", "value": 40 },
+      "sa_value": {
+        "comparator": ">=",
+        "value": 35
+      },
+      "general_value": {
+        "comparator": ">=",
+        "value": 40
+      },
       "direction_of_risk": "n/a",
       "provenance_tier": "guideline-endorsed",
       "evidence_grade": null,
       "sources": [
-        { "label": "AHA Scientific Statement — ASCVD in South Asians (Volgman 2018)", "url": "https://doi.org/10.1161/CIR.0000000000000580", "ref": "DOI:10.1161/CIR.0000000000000580", "kind": "guideline", "in_registry": true }
+        {
+          "label": "AHA Scientific Statement — ASCVD in South Asians (Volgman 2018)",
+          "url": "https://doi.org/10.1161/CIR.0000000000000580",
+          "ref": "DOI:10.1161/CIR.0000000000000580",
+          "kind": "guideline",
+          "in_registry": true
+        }
       ],
       "overclaim_guard": null,
       "notes": "SA develop CAD ~10 years earlier; earlier baseline CAC discussion. In-app, CAC nudges tie to PREVENT 5-<20% band."
@@ -306,15 +560,30 @@
       "unit": "ng/mL",
       "population": "south_asian",
       "sex": "any",
-      "age": { "min": 18, "max": null },
+      "age": {
+        "min": 18,
+        "max": null
+      },
       "measure_type": "reference_range",
-      "sa_value": { "low": 30, "high": 100 },
-      "general_value": { "low": 30, "high": 100 },
+      "sa_value": {
+        "low": 30,
+        "high": 100
+      },
+      "general_value": {
+        "low": 30,
+        "high": 100
+      },
       "direction_of_risk": "low",
       "provenance_tier": "study-derived",
       "evidence_grade": null,
       "sources": [
-        { "label": "Endocrine Society — Evaluation, Treatment, and Prevention of Vitamin D Deficiency (2011)", "url": "https://doi.org/10.1210/jc.2011-0385", "ref": "DOI:10.1210/jc.2011-0385", "kind": "guideline", "in_registry": true }
+        {
+          "label": "Endocrine Society — Evaluation, Treatment, and Prevention of Vitamin D Deficiency (2011)",
+          "url": "https://doi.org/10.1210/jc.2011-0385",
+          "ref": "DOI:10.1210/jc.2011-0385",
+          "kind": "guideline",
+          "in_registry": true
+        }
       ],
       "overclaim_guard": "The reference range is not SA-specific; the SA-relevant point is high deficiency prevalence, warranting screening — not a different normal range.",
       "notes": "SouthAsianScreeningPack.vitaminDScreen prompts if not measured within a year."
@@ -326,15 +595,30 @@
       "unit": "uIU/mL",
       "population": "south_asian",
       "sex": "any",
-      "age": { "min": 30, "max": null },
+      "age": {
+        "min": 30,
+        "max": null
+      },
       "measure_type": "reference_range",
-      "sa_value": { "low": 2, "high": 15 },
-      "general_value": { "low": 2, "high": 15 },
+      "sa_value": {
+        "low": 2,
+        "high": 15
+      },
+      "general_value": {
+        "low": 2,
+        "high": 15
+      },
       "direction_of_risk": "high",
       "provenance_tier": "study-derived",
       "evidence_grade": "B",
       "sources": [
-        { "label": "MASALA cardiometabolic profile / HOMA-IR vs MESA (Kanaya 2014)", "url": "https://masalastudy.org/publications/", "ref": null, "kind": "primaryStudy", "in_registry": true }
+        {
+          "label": "MASALA cardiometabolic profile / HOMA-IR vs MESA (Kanaya 2014)",
+          "url": "https://masalastudy.org/publications/",
+          "ref": null,
+          "kind": "primaryStudy",
+          "in_registry": true
+        }
       ],
       "overclaim_guard": "Explicitly NOT guideline-backed; present as an optional/exploratory marker, never as recommended screening.",
       "notes": "In-app copy flags this as not guideline-backed. Good example of an honest study-derived row."
@@ -346,15 +630,30 @@
       "unit": "mL/min/1.73m2",
       "population": "general",
       "sex": "any",
-      "age": { "min": 18, "max": null },
+      "age": {
+        "min": 18,
+        "max": null
+      },
       "measure_type": "deprecated_adjustment",
-      "sa_value": { "adjust": false, "guidance": "do NOT apply a race/ancestry coefficient" },
-      "general_value": { "low": 60, "high": 120 },
+      "sa_value": {
+        "adjust": false,
+        "guidance": "do NOT apply a race/ancestry coefficient"
+      },
+      "general_value": {
+        "low": 60,
+        "high": 120
+      },
       "direction_of_risk": "low",
       "provenance_tier": "contested-deprecated",
       "evidence_grade": null,
       "sources": [
-        { "label": "New Creatinine- and Cystatin C–Based Equations without Race (CKD-EPI 2021, Inker et al., NEJM)", "url": "https://doi.org/10.1056/NEJMoa2102953", "ref": "DOI:10.1056/NEJMoa2102953; PMID:34554658", "kind": "primaryStudy", "in_registry": true }
+        {
+          "label": "New Creatinine- and Cystatin C–Based Equations without Race (CKD-EPI 2021, Inker et al., NEJM)",
+          "url": "https://doi.org/10.1056/NEJMoa2102953",
+          "ref": "DOI:10.1056/NEJMoa2102953; PMID:34554658",
+          "kind": "primaryStudy",
+          "in_registry": true
+        }
       ],
       "overclaim_guard": "Do NOT ship an ancestry-adjusted eGFR. The 2021 refit removed the race term as a social-not-biological construct that delayed care. This row exists to instruct consumers to NOT stratify eGFR by ancestry.",
       "notes": "The credibility showcase row: an adjustment the field is moving away from, included precisely to warn against it. Consistent with loinc.yaml keeping eGFR at real LOINC 33914-3 with no ancestry term."
@@ -366,18 +665,866 @@
       "unit": "%",
       "population": "south_asian",
       "sex": "any",
-      "age": { "min": 30, "max": null },
+      "age": {
+        "min": 30,
+        "max": null
+      },
       "measure_type": "interpretation_caveat",
-      "sa_value": { "adjustment": "none available", "guidance": "treat estimate as a floor; it underestimates SA risk" },
-      "general_value": { "low": 0, "high": 5 },
+      "sa_value": {
+        "adjustment": "none available",
+        "guidance": "treat estimate as a floor; it underestimates SA risk"
+      },
+      "general_value": {
+        "low": 0,
+        "high": 5
+      },
       "direction_of_risk": "high",
       "provenance_tier": "study-derived",
       "evidence_grade": null,
       "sources": [
-        { "label": "Development and Validation of the AHA PREVENT Equations (Circulation 2024)", "url": "https://doi.org/10.1161/CIRCULATIONAHA.123.067626", "ref": "DOI:10.1161/CIRCULATIONAHA.123.067626", "kind": "guideline", "in_registry": true }
+        {
+          "label": "Development and Validation of the AHA PREVENT Equations (Circulation 2024)",
+          "url": "https://doi.org/10.1161/CIRCULATIONAHA.123.067626",
+          "ref": "DOI:10.1161/CIRCULATIONAHA.123.067626",
+          "kind": "guideline",
+          "in_registry": true
+        }
       ],
       "overclaim_guard": "There is no validated SA multiplier in PREVENT; do not invent one. State the limitation ('treat as a floor'), do not apply a made-up adjustment.",
       "notes": "Contrast with the eGFR row: here we flag under-estimation but still refuse to fabricate an adjustment. loinc.yaml PRAJNA-PREVENT plain_language already says 'treat it as a floor'."
+    },
+    {
+      "id": "triglycerides-risk-enhancer",
+      "analyte": "Triglycerides (risk-enhancer threshold)",
+      "loinc": "2571-8",
+      "unit": "mg/dL",
+      "population": "south_asian",
+      "sex": "any",
+      "age": {
+        "min": 18,
+        "max": null
+      },
+      "measure_type": "risk_flag",
+      "sa_value": {
+        "comparator": ">=",
+        "value": 175
+      },
+      "general_value": {
+        "comparator": ">=",
+        "value": 175
+      },
+      "direction_of_risk": "high",
+      "provenance_tier": "guideline-endorsed",
+      "evidence_grade": null,
+      "sources": [
+        {
+          "label": "2018 AHA/ACC/Multi-Society Blood Cholesterol Guideline",
+          "url": "https://doi.org/10.1161/CIR.0000000000000625",
+          "ref": "DOI:10.1161/CIR.0000000000000625",
+          "kind": "guideline",
+          "in_registry": true
+        }
+      ],
+      "overclaim_guard": "The 175 mg/dL cut is not SA-specific; the SA-relevant point is that atherogenic dyslipidemia (high TG + low HDL) reaches it often even at a normal LDL-C.",
+      "notes": "Completes the atherogenic-dyslipidemia composite inputs. TG LOINC 2571-8."
+    },
+    {
+      "id": "hscrp-risk-enhancer",
+      "analyte": "hs-CRP (risk-enhancer threshold)",
+      "loinc": "30522-7",
+      "unit": "mg/L",
+      "population": "south_asian",
+      "sex": "any",
+      "age": {
+        "min": 18,
+        "max": null
+      },
+      "measure_type": "risk_flag",
+      "sa_value": {
+        "comparator": ">=",
+        "value": 2
+      },
+      "general_value": {
+        "comparator": ">=",
+        "value": 2
+      },
+      "direction_of_risk": "high",
+      "provenance_tier": "guideline-endorsed",
+      "evidence_grade": null,
+      "sources": [
+        {
+          "label": "2018 AHA/ACC/Multi-Society Blood Cholesterol Guideline",
+          "url": "https://doi.org/10.1161/CIR.0000000000000625",
+          "ref": "DOI:10.1161/CIR.0000000000000625",
+          "kind": "guideline",
+          "in_registry": true
+        }
+      ],
+      "overclaim_guard": "The >=2 mg/L cut is not SA-specific; SA users more often exceed it due to higher visceral adiposity at the same BMI.",
+      "notes": "hs-CRP LOINC 30522-7."
+    },
+    {
+      "id": "sa-ancestry-ascvd-risk-enhancer",
+      "analyte": "South Asian ancestry (ASCVD risk-enhancing factor)",
+      "loinc": null,
+      "unit": "n/a",
+      "population": "south_asian",
+      "sex": "any",
+      "age": {
+        "min": 18,
+        "max": null
+      },
+      "measure_type": "interpretation_caveat",
+      "sa_value": {
+        "ancestry_is_ascvd_risk_enhancer": true,
+        "guidance": "The 2018 AHA/ACC guideline lists South Asian ancestry as a formal ASCVD risk-enhancing factor; use it to move borderline/intermediate-risk patients toward the treat decision."
+      },
+      "general_value": null,
+      "direction_of_risk": "high",
+      "provenance_tier": "guideline-endorsed",
+      "evidence_grade": null,
+      "sources": [
+        {
+          "label": "2018 AHA/ACC/Multi-Society Blood Cholesterol Guideline",
+          "url": "https://doi.org/10.1161/CIR.0000000000000625",
+          "ref": "DOI:10.1161/CIR.0000000000000625",
+          "kind": "guideline",
+          "in_registry": true
+        }
+      ],
+      "overclaim_guard": "A risk-enhancer is not a risk multiplier; it does not by itself diagnose disease or mandate a statin — it shifts the borderline decision.",
+      "notes": "Explicitly named in the 2018 AHA/ACC Cholesterol Guideline risk-enhancer list."
+    },
+    {
+      "id": "sa-very-high-risk-lipid-targets",
+      "analyte": "LDL-C / non-HDL-C (SA very-high-risk targets)",
+      "loinc": "PRAJNA-NONHDL",
+      "unit": "mg/dL",
+      "population": "south_asian",
+      "sex": "any",
+      "age": {
+        "min": 18,
+        "max": null
+      },
+      "measure_type": "interpretation_caveat",
+      "sa_value": {
+        "ldl_c_target_very_high_risk": "<70",
+        "non_hdl_target_very_high_risk": "<100",
+        "guidance": "LAI recommends more aggressive LDL-C/non-HDL targets for SA very-high-risk patients."
+      },
+      "general_value": {
+        "ldl_c_target_very_high_risk": "<70",
+        "non_hdl_target_very_high_risk": "<130"
+      },
+      "direction_of_risk": "high",
+      "provenance_tier": "study-derived",
+      "evidence_grade": null,
+      "sources": [
+        {
+          "label": "Lipid Association of India SA lipid targets (Enas 2013)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3868060/",
+          "ref": "PMCID:PMC3868060",
+          "kind": "consensus",
+          "in_registry": true
+        },
+        {
+          "label": "NLA — Prevention of ASCVD in South Asians (2021)",
+          "url": "https://doi.org/10.1016/j.jacl.2021.03.007",
+          "ref": "DOI:10.1016/j.jacl.2021.03.007",
+          "kind": "consensus",
+          "in_registry": true
+        }
+      ],
+      "overclaim_guard": "LAI targets are risk-stratified; do not present a single cutoff as applying to all SA users. LDL-C <70 matches general very-high-risk guidance; the SA-specific piece is the tighter non-HDL target.",
+      "notes": "Tightens the non-HDL-130 reference row for the very-high-risk stratum. review pending clinician sign-off.",
+      "review_status": "proposed"
+    },
+    {
+      "id": "bmi-masld-screening-threshold",
+      "analyte": "BMI (MASLD / fatty-liver screening trigger)",
+      "loinc": "PRAJNA-BMI",
+      "unit": "kg/m2",
+      "population": "south_asian",
+      "sex": "any",
+      "age": {
+        "min": 18,
+        "max": null
+      },
+      "measure_type": "screening_threshold",
+      "sa_value": {
+        "comparator": ">=",
+        "value": 23
+      },
+      "general_value": {
+        "comparator": ">=",
+        "value": 25
+      },
+      "direction_of_risk": "high",
+      "provenance_tier": "guideline-endorsed",
+      "evidence_grade": null,
+      "sources": [
+        {
+          "label": "Multi-society Delphi consensus statement on new fatty liver disease nomenclature (MASLD) (Rinella et al., 2023)",
+          "url": "https://doi.org/10.1097/HEP.0000000000000520",
+          "ref": "DOI:10.1097/HEP.0000000000000520",
+          "kind": "consensus",
+          "in_registry": false
+        },
+        {
+          "label": "Ectopic fat depots and coronary artery calcium in South Asians vs other ethnic groups (Garg et al., JAHA 2016)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27856485/",
+          "ref": "PMID:27856485",
+          "kind": "primaryStudy",
+          "in_registry": false
+        }
+      ],
+      "overclaim_guard": "A lower screening BMI reflects earlier ectopic-fat accumulation, not a different disease; MASLD is diagnosed by imaging/enzymes, not by BMI alone.",
+      "notes": "SA carry the highest intrahepatic fat of MESA ethnic groups at lower BMI (Garg 2016). MASLD nomenclature (2023) uses BMI >=23 for Asian populations.",
+      "review_status": "proposed"
+    },
+    {
+      "id": "score2-south-asian-multiplier",
+      "analyte": "SCORE2 10-year CVD risk (South Asian multiplier)",
+      "loinc": "PRAJNA-PREVENT",
+      "unit": "%",
+      "population": "south_asian",
+      "sex": "any",
+      "age": {
+        "min": 40,
+        "max": null
+      },
+      "measure_type": "interpretation_caveat",
+      "sa_value": {
+        "multiplier_indian_bangladeshi": 1.3,
+        "multiplier_pakistani": 1.7,
+        "guidance": "Multiply the SCORE2 estimate by the ancestry-specific factor before applying risk thresholds."
+      },
+      "general_value": {
+        "multiplier": 1.0
+      },
+      "direction_of_risk": "high",
+      "provenance_tier": "guideline-endorsed",
+      "evidence_grade": null,
+      "sources": [
+        {
+          "label": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice",
+          "url": "https://doi.org/10.1093/eurheartj/ehab484",
+          "ref": "DOI:10.1093/eurheartj/ehab484",
+          "kind": "guideline",
+          "in_registry": false
+        }
+      ],
+      "overclaim_guard": "The multiplier applies to SCORE2 specifically (derived from QRISK3 data); do not transplant it onto PREVENT or the Pooled Cohort Equations, which have no validated SA multiplier.",
+      "notes": "The only major guideline with a numeric SA correction factor (2021 ESC, Class IIa LOE B). Companion to the PREVENT 'treat as a floor' caveat row.",
+      "review_status": "proposed"
+    },
+    {
+      "id": "cac-south-asian-percentiles",
+      "analyte": "Coronary artery calcium (South Asian age/sex percentiles)",
+      "loinc": "PRAJNA-CAC",
+      "unit": "Agatston",
+      "population": "south_asian",
+      "sex": "any",
+      "age": {
+        "min": 40,
+        "max": null
+      },
+      "measure_type": "reference_range",
+      "sa_value": {
+        "prevalence_cac_gt0": {
+          "age50": {
+            "men": 0.45,
+            "women": 0.2
+          },
+          "age60": {
+            "men": 0.7,
+            "women": 0.4
+          },
+          "age70": {
+            "men": 0.9,
+            "women": 0.7
+          }
+        },
+        "p75_age60": {
+          "men": 186,
+          "women": 26
+        },
+        "guidance": "Use age/sex-specific percentiles, not the raw 100 cutoff, for younger SA patients."
+      },
+      "general_value": null,
+      "direction_of_risk": "high",
+      "provenance_tier": "study-derived",
+      "evidence_grade": null,
+      "sources": [
+        {
+          "label": "South Asian coronary artery calcium age/sex percentiles — MASALA + DILWALE (Tasdighi et al., JACC Advances 2025)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40402122/",
+          "ref": "PMID:40402122",
+          "kind": "primaryStudy",
+          "in_registry": false
+        }
+      ],
+      "overclaim_guard": "These are cohort percentiles (MASALA+DILWALE), not a guideline threshold; CAC=0 remains reassuring at age 50 (55% of men, 80% of women) but less so at 70.",
+      "notes": "First SA-specific CAC percentile table to exist (n=2,743, ASCVD-free). review pending clinician sign-off.",
+      "review_status": "proposed"
+    },
+    {
+      "id": "remnant-cholesterol-sa-marker",
+      "analyte": "Remnant cholesterol (optional atherogenic marker)",
+      "loinc": "PRAJNA-REMNANT",
+      "unit": "mg/dL",
+      "population": "south_asian",
+      "sex": "any",
+      "age": {
+        "min": 18,
+        "max": null
+      },
+      "measure_type": "risk_flag",
+      "sa_value": {
+        "comparator": ">=",
+        "value": 33
+      },
+      "general_value": null,
+      "direction_of_risk": "high",
+      "provenance_tier": "study-derived",
+      "evidence_grade": null,
+      "sources": [
+        {
+          "label": "Remnant cholesterol and incident coronary artery calcium in South Asians — MASALA (Manghis et al., J Clin Lipidol 2025)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41168049/",
+          "ref": "PMID:41168049",
+          "kind": "primaryStudy",
+          "in_registry": false
+        }
+      ],
+      "overclaim_guard": "Explicitly not a guideline cutoff; the top MASALA quartile (>=~33 mg/dL) was associated with incident CAC, not CAC progression. Present as exploratory. Calculate as total cholesterol - HDL-C - LDL-C.",
+      "notes": "MASALA: Q4 vs Q1 OR 2.57 for incident CAC over 5y, independent of LDL-C. review pending clinician sign-off.",
+      "review_status": "proposed"
+    },
+    {
+      "id": "apol1-not-south-asian",
+      "analyte": "APOL1 kidney-risk variants (ancestry misattribution)",
+      "loinc": null,
+      "unit": "n/a",
+      "population": "general",
+      "sex": "any",
+      "age": {
+        "min": 18,
+        "max": null
+      },
+      "measure_type": "deprecated_adjustment",
+      "sa_value": {
+        "adjust": false,
+        "guidance": "Do NOT apply APOL1 G1/G2 kidney-risk stratification to South Asians — these variants are high-frequency only in West-African ancestry (<1% in non-Africans)."
+      },
+      "general_value": null,
+      "direction_of_risk": "n/a",
+      "provenance_tier": "contested-deprecated",
+      "evidence_grade": null,
+      "sources": [
+        {
+          "label": "APOL1 kidney-risk variants are West-African ancestry–specific (review)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5495568/",
+          "ref": "PMCID:PMC5495568",
+          "kind": "primaryStudy",
+          "in_registry": false
+        }
+      ],
+      "overclaim_guard": "This row exists to instruct consumers NOT to use APOL1 in a South Asian risk model; including it would be a false-ancestry-attribution error.",
+      "notes": "Credibility-showcase 'do-not-apply' row, in the spirit of the deprecated eGFR row.",
+      "review_status": "proposed"
+    },
+    {
+      "id": "aldh2-adh1b-not-south-asian",
+      "analyte": "ALDH2*2 / ADH1B*2 alcohol-flush variants (ancestry misattribution)",
+      "loinc": null,
+      "unit": "n/a",
+      "population": "general",
+      "sex": "any",
+      "age": {
+        "min": 18,
+        "max": null
+      },
+      "measure_type": "deprecated_adjustment",
+      "sa_value": {
+        "adjust": false,
+        "guidance": "Do NOT surface alcohol-flush / fast-metabolizer warnings for South Asians based on ALDH2*2 or ADH1B*2 — these are predominantly East Asian (low single-digit % in SA)."
+      },
+      "general_value": null,
+      "direction_of_risk": "n/a",
+      "provenance_tier": "contested-deprecated",
+      "evidence_grade": null,
+      "sources": [
+        {
+          "label": "ALDH2*2 / ADH1B*2 alcohol-metabolism variants are predominantly East Asian (review)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10594868/",
+          "ref": "PMCID:PMC10594868",
+          "kind": "primaryStudy",
+          "in_registry": false
+        }
+      ],
+      "overclaim_guard": "This row exists to instruct consumers NOT to apply East-Asian alcohol-metabolism genetics to South Asians.",
+      "notes": "Credibility-showcase 'do-not-apply' row. South Asians more often carry the slower ADH1B*1.",
+      "review_status": "proposed"
+    },
+    {
+      "id": "vitamin-b12-screening-emphasis",
+      "analyte": "Vitamin B12 (screening emphasis)",
+      "loinc": "2132-9",
+      "unit": "pg/mL",
+      "population": "south_asian",
+      "sex": "any",
+      "age": {
+        "min": 18,
+        "max": null
+      },
+      "measure_type": "reference_range",
+      "sa_value": {
+        "low": 200,
+        "high": 900
+      },
+      "general_value": {
+        "low": 200,
+        "high": 900
+      },
+      "direction_of_risk": "low",
+      "provenance_tier": "study-derived",
+      "evidence_grade": null,
+      "overclaim_guard": "The reference range is not SA-specific; the SA-relevant point is high deficiency prevalence in vegetarian South Asians, warranting screening — not a different normal range.",
+      "notes": "Exact parallel to the vitamin-D screening-emphasis row. B12 LOINC 2132-9.",
+      "review_status": "proposed",
+      "sources": [
+        {
+          "label": "Hyperhomocysteinemia & cobalamin (B12) deficiency in Asian Indians (Refsum et al., Am J Clin Nutr 2001)",
+          "url": "https://doi.org/10.1093/ajcn/74.2.233",
+          "ref": "DOI:10.1093/ajcn/74.2.233; PMID:11470726",
+          "kind": "primaryStudy",
+          "in_registry": false
+        },
+        {
+          "label": "Vitamin B12 deficiency & hyperhomocysteinemia in rural and urban Indians (Yajnik et al., JAPI 2006)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17214273/",
+          "ref": "PMID:17214273",
+          "kind": "primaryStudy",
+          "in_registry": false
+        }
+      ]
+    },
+    {
+      "id": "thalassemia-carrier-screening",
+      "analyte": "Thalassemia / hemoglobinopathy carrier screening",
+      "loinc": "30428-7",
+      "unit": "fL",
+      "population": "south_asian",
+      "sex": "any",
+      "age": {
+        "min": 18,
+        "max": null
+      },
+      "measure_type": "interpretation_caveat",
+      "sa_value": {
+        "mcv_below": 80,
+        "confirm_with": "hemoglobin electrophoresis / HbA2",
+        "guidance": "Offer carrier screening in South Asian ancestry (higher β-thalassemia, HbE, HbD-Punjab prevalence), especially preconception; low MCV with normal iron warrants electrophoresis."
+      },
+      "general_value": null,
+      "direction_of_risk": "low",
+      "provenance_tier": "guideline-endorsed",
+      "evidence_grade": null,
+      "overclaim_guard": "A carrier trait is not a disease; screening informs reproductive counseling and explains a spuriously altered HbA1c — it is not a diagnosis.",
+      "notes": "Also the mechanism behind the HbA1c interpretation caveat. MCV LOINC 30428-7.",
+      "review_status": "proposed",
+      "sources": [
+        {
+          "label": "ACOG Practice Bulletin No. 78: Hemoglobinopathies in Pregnancy (Obstet Gynecol 2007)",
+          "url": "https://doi.org/10.1097/00006250-200701000-00055",
+          "ref": "DOI:10.1097/00006250-200701000-00055; PMID:17197616",
+          "kind": "guideline",
+          "in_registry": false
+        }
+      ]
+    },
+    {
+      "id": "normal-alt-masld-caveat",
+      "analyte": "ALT (MASLD interpretation caveat)",
+      "loinc": "1742-6",
+      "unit": "U/L",
+      "population": "south_asian",
+      "sex": "any",
+      "age": {
+        "min": 18,
+        "max": null
+      },
+      "measure_type": "interpretation_caveat",
+      "sa_value": {
+        "guidance": "A normal ALT does not exclude MASLD; in SA with metabolic risk, use imaging (ultrasound / hepatic-fat) rather than relying on enzymes."
+      },
+      "general_value": null,
+      "direction_of_risk": "high",
+      "provenance_tier": "study-derived",
+      "evidence_grade": null,
+      "overclaim_guard": "ALT is not universally unreliable; the point is that a normal value is insufficient to rule out fatty liver in a high-metabolic-risk SA profile.",
+      "notes": "Pairs with the BMI-23 MASLD screening trigger. ALT LOINC 1742-6.",
+      "review_status": "proposed",
+      "sources": [
+        {
+          "label": "Proportion of NAFLD/MASLD patients with normal ALT: systematic review & meta-analysis (BMC Gastroenterol 2020)",
+          "url": "https://doi.org/10.1186/s12876-020-1165-z",
+          "ref": "DOI:10.1186/s12876-020-1165-z; PMID:31937252; PMCID:PMC6961232",
+          "kind": "primaryStudy",
+          "in_registry": false
+        }
+      ]
+    },
+    {
+      "id": "benign-ethnic-neutropenia",
+      "analyte": "WBC / neutrophils (benign ethnic neutropenia)",
+      "loinc": "6690-2",
+      "unit": "10*3/uL",
+      "population": "south_asian",
+      "sex": "any",
+      "age": {
+        "min": 18,
+        "max": null
+      },
+      "measure_type": "interpretation_caveat",
+      "sa_value": {
+        "guidance": "A mildly low WBC / absolute neutrophil count can be a normal ancestry-linked variant; do not over-investigate isolated mild neutropenia without other features."
+      },
+      "general_value": null,
+      "direction_of_risk": "low",
+      "provenance_tier": "study-derived",
+      "evidence_grade": null,
+      "overclaim_guard": "Benign ethnic neutropenia is best-established for African ancestry; the South Asian evidence base is thinner — flag it as a possibility, not a rule.",
+      "notes": "Included with an explicit evidence-strength caveat. WBC LOINC 6690-2.",
+      "review_status": "proposed",
+      "sources": [
+        {
+          "label": "Benign ethnic neutropenia (Atallah-Yunes et al., Blood Rev 2019)",
+          "url": "https://doi.org/10.1016/j.blre.2019.06.003",
+          "ref": "DOI:10.1016/j.blre.2019.06.003; PMID:31255364; PMCID:PMC6702066",
+          "kind": "primaryStudy",
+          "in_registry": false
+        }
+      ]
+    },
+    {
+      "id": "slco1b1-statin-pgx",
+      "analyte": "SLCO1B1 rs4149056 (statin pharmacogenomics)",
+      "loinc": null,
+      "unit": "n/a",
+      "population": "south_asian",
+      "sex": "any",
+      "age": {
+        "min": 18,
+        "max": null
+      },
+      "measure_type": "interpretation_caveat",
+      "sa_value": {
+        "variant": "SLCO1B1 rs4149056 (c.521T>C)",
+        "action": "In decreased-function carriers, limit simvastatin dose and prefer rosuvastatin or pravastatin.",
+        "frequency_note": "C-allele frequency in SA is broadly comparable to White populations (~15-20%)."
+      },
+      "general_value": null,
+      "direction_of_risk": "n/a",
+      "provenance_tier": "guideline-endorsed",
+      "evidence_grade": null,
+      "overclaim_guard": "The recommendation is genotype-guided statin selection, not SA-specific dosing; there is no SA-specific dosing table.",
+      "notes": "CPIC 2022 statin/SLCO1B1 guideline. Default move in SA with statin myalgia: consider genotyping and switch off simvastatin before declaring intolerance.",
+      "review_status": "proposed",
+      "sources": [
+        {
+          "label": "CPIC Guideline for SLCO1B1/ABCG2/CYP2C9 & statin-associated musculoskeletal symptoms (Clin Pharmacol Ther 2022)",
+          "url": "https://doi.org/10.1002/cpt.2557",
+          "ref": "DOI:10.1002/cpt.2557; PMID:35152405; PMCID:PMC9035072",
+          "kind": "guideline",
+          "in_registry": false
+        }
+      ]
+    },
+    {
+      "id": "pediatric-bmi-iap",
+      "analyte": "Pediatric BMI (IAP South Asian cut-offs)",
+      "loinc": "PRAJNA-BMI",
+      "unit": "percentile",
+      "population": "south_asian",
+      "sex": "any",
+      "age": {
+        "min": 5,
+        "max": 18
+      },
+      "measure_type": "reference_range",
+      "sa_value": {
+        "overweight_percentile": 75,
+        "obese_percentile": 95,
+        "adult_equivalent": "overweight = adult BMI 23, obese = adult BMI 27 at age 18"
+      },
+      "general_value": {
+        "overweight_percentile": 85,
+        "obese_percentile": 95
+      },
+      "direction_of_risk": "high",
+      "provenance_tier": "guideline-endorsed",
+      "evidence_grade": null,
+      "overclaim_guard": "These are cardiometabolic-risk-adjusted centiles on IAP 2015 charts; under-5 growth still follows WHO international standards regardless of ethnicity.",
+      "notes": "Plot SA children on CDC and IAP charts; when CDC says normal but IAP says at-risk, treat as at-risk. IAP 2015 (Khadilkar).",
+      "review_status": "proposed",
+      "sources": [
+        {
+          "label": "Revised IAP 2015 growth charts / BMI cut-offs for 5-18y Indian children (Khadilkar et al., Indian J Endocrinol Metab 2015)",
+          "url": "https://doi.org/10.4103/2230-8210.159028",
+          "ref": "DOI:10.4103/2230-8210.159028; PMID:26180761; PMCID:PMC4481652",
+          "kind": "guideline",
+          "in_registry": false
+        }
+      ]
+    },
+    {
+      "id": "lean-diabetes-phenotype",
+      "analyte": "Diabetes risk at low BMI (lean-diabetes phenotype)",
+      "loinc": "PRAJNA-BMI",
+      "unit": "kg/m2",
+      "population": "south_asian",
+      "sex": "any",
+      "age": {
+        "min": 18,
+        "max": null
+      },
+      "measure_type": "interpretation_caveat",
+      "sa_value": {
+        "guidance": "Do not gate diabetes-risk screening on BMI>=25 — T2D at BMI<25 is 2-4x more common in Asian Indians. Screen from BMI 23 and use waist-to-height >=0.5."
+      },
+      "general_value": null,
+      "direction_of_risk": "high",
+      "provenance_tier": "study-derived",
+      "evidence_grade": null,
+      "overclaim_guard": "Lean diabetes reflects reduced β-cell function / 'thin-fat' body composition, not the absence of metabolic risk; a normal BMI is not reassurance.",
+      "notes": "INSPIRED study. Reinforces the BMI-23 diabetes-screening trigger.",
+      "review_status": "proposed",
+      "sources": [
+        {
+          "label": "Young-onset diabetes in Asian Indians linked to lower beta-cell function (INSPIRED; Diabetologia 2022)",
+          "url": "https://doi.org/10.1007/s00125-022-05671-z",
+          "ref": "DOI:10.1007/s00125-022-05671-z; PMID:35247066; PMCID:PMC9076730",
+          "kind": "primaryStudy",
+          "in_registry": false
+        }
+      ]
+    },
+    {
+      "id": "gdm-early-screening",
+      "analyte": "Gestational diabetes (early screening in SA)",
+      "loinc": null,
+      "unit": "n/a",
+      "population": "south_asian",
+      "sex": "female",
+      "age": {
+        "min": 18,
+        "max": 50
+      },
+      "measure_type": "interpretation_caveat",
+      "sa_value": {
+        "early_screen": "first-trimester screening for high-risk groups including South Asian ancestry",
+        "iadpsg_75g_ogtt_cutoffs": "FPG>=92, 1h>=180, 2h>=153 mg/dL (numeric cutoffs unchanged)",
+        "guidance": "SA women develop GDM at lower BMI and earlier in pregnancy; screen earlier, same thresholds."
+      },
+      "general_value": {
+        "screen": "24-28 weeks"
+      },
+      "direction_of_risk": "high",
+      "provenance_tier": "guideline-endorsed",
+      "evidence_grade": null,
+      "overclaim_guard": "The diagnostic thresholds are unchanged; the SA-specific action is earlier screening, not a different cutoff.",
+      "notes": "IADPSG 2010; ADA 2024 §15 (Pregnancy); FIGO 2015.",
+      "review_status": "proposed",
+      "sources": [
+        {
+          "label": "IADPSG recommendations on diagnosis & classification of hyperglycemia in pregnancy (Diabetes Care 2010)",
+          "url": "https://doi.org/10.2337/dc09-1848",
+          "ref": "DOI:10.2337/dc09-1848; PMID:20190296; PMCID:PMC2827530",
+          "kind": "consensus",
+          "in_registry": false
+        },
+        {
+          "label": "Diagnosis and Classification of Diabetes: Standards of Care in Diabetes—2024",
+          "url": "https://doi.org/10.2337/dc24-S002",
+          "ref": "DOI:10.2337/dc24-S002",
+          "kind": "guideline",
+          "in_registry": true
+        }
+      ]
+    },
+    {
+      "id": "menopause-age-sa",
+      "analyte": "Age at natural menopause (South Asian women)",
+      "loinc": null,
+      "unit": "year",
+      "population": "south_asian",
+      "sex": "female",
+      "age": {
+        "min": 40,
+        "max": null
+      },
+      "measure_type": "reference_range",
+      "sa_value": {
+        "median_age": 49,
+        "early_or_premature_le45_pct": 0.3,
+        "guidance": "~30% of US SA women experience early/premature menopause (<=45y) vs <7% in other US groups."
+      },
+      "general_value": {
+        "median_age": "50-51 (US White/Black)"
+      },
+      "direction_of_risk": "n/a",
+      "provenance_tier": "study-derived",
+      "evidence_grade": null,
+      "overclaim_guard": "Cohort estimate (n=405); earlier menopause raises cardiometabolic risk earlier but is not itself a disease.",
+      "notes": "Lyu, Climacteric 2025. New domain: women's health.",
+      "review_status": "proposed",
+      "sources": [
+        {
+          "label": "Menopausal experience (hot flashes, urinary incontinence, mood) among South Asian American women — MASALA (Lyu et al., Climacteric 2025)",
+          "url": "https://doi.org/10.1080/13697137.2025.2480584",
+          "ref": "DOI:10.1080/13697137.2025.2480584; PMID:40177961; PMCID:PMC12353937",
+          "kind": "primaryStudy",
+          "in_registry": false
+        }
+      ]
+    },
+    {
+      "id": "parity-cardiometabolic-sa",
+      "analyte": "Parity (cardiometabolic effect, SA women)",
+      "loinc": null,
+      "unit": "n/a",
+      "population": "south_asian",
+      "sex": "female",
+      "age": {
+        "min": 18,
+        "max": null
+      },
+      "measure_type": "interpretation_caveat",
+      "sa_value": {
+        "high_parity": ">=2 live births",
+        "effect_over_5y_vs_0_1": "SBP +8.9 mmHg, DBP +4.1 mmHg, LDL-C +8.9 mg/dL"
+      },
+      "general_value": null,
+      "direction_of_risk": "high",
+      "provenance_tier": "study-derived",
+      "evidence_grade": null,
+      "overclaim_guard": "Association from MASALA (n~415); parity is a risk-context flag, not a screening threshold.",
+      "notes": "Mehta, JACC Advances 2026. Surface on women's cardiometabolic panels.",
+      "review_status": "proposed",
+      "sources": [
+        {
+          "label": "Association of Parity With ASCVD Risk Factors Among South Asian Women — MASALA (Mehta et al., JACC Advances 2026)",
+          "url": "https://doi.org/10.1016/j.jacadv.2026.102647",
+          "ref": "DOI:10.1016/j.jacadv.2026.102647",
+          "kind": "primaryStudy",
+          "in_registry": false
+        }
+      ]
+    },
+    {
+      "id": "mthfr-not-sa-variant",
+      "analyte": "MTHFR C677T as an 'SA variant' (misattribution)",
+      "loinc": null,
+      "unit": "n/a",
+      "population": "general",
+      "sex": "any",
+      "age": {
+        "min": 18,
+        "max": null
+      },
+      "measure_type": "deprecated_adjustment",
+      "sa_value": {
+        "adjust": false,
+        "guidance": "Do NOT treat MTHFR C677T as a South Asian homocysteine variant — it is not enriched in SA. Elevated homocysteine here is driven by dietary (vegetarian) B12 deficiency; treat the B12, not the SNP."
+      },
+      "general_value": null,
+      "direction_of_risk": "n/a",
+      "provenance_tier": "contested-deprecated",
+      "evidence_grade": null,
+      "overclaim_guard": "Credibility-showcase 'do-not-apply' row: the actionable target is B12 status, not MTHFR genotyping.",
+      "notes": "Driver evidence: Refsum 2001 (B12 deficiency → hyperhomocysteinemia in Indians).",
+      "review_status": "proposed",
+      "sources": [
+        {
+          "label": "Hyperhomocysteinemia & cobalamin (B12) deficiency in Asian Indians (Refsum et al., Am J Clin Nutr 2001)",
+          "url": "https://doi.org/10.1093/ajcn/74.2.233",
+          "ref": "DOI:10.1093/ajcn/74.2.233; PMID:11470726",
+          "kind": "primaryStudy",
+          "in_registry": false
+        }
+      ]
+    },
+    {
+      "id": "apob-apoa1-ratio",
+      "analyte": "ApoB/ApoA-I ratio (lead SA atherogenic metric)",
+      "loinc": "PRAJNA-APOBA1",
+      "unit": "ratio",
+      "population": "south_asian",
+      "sex": "any",
+      "age": {
+        "min": 18,
+        "max": null
+      },
+      "measure_type": "interpretation_caveat",
+      "sa_value": {
+        "note": "The ApoB/ApoA-I ratio was the strongest single modifiable MI predictor in South Asians (INTERHEART; population-attributable risk ~47%).",
+        "guidance": "Where available, weight the ApoB/ApoA-I ratio over LDL-C alone for SA risk discussions."
+      },
+      "general_value": null,
+      "direction_of_risk": "high",
+      "provenance_tier": "study-derived",
+      "evidence_grade": null,
+      "overclaim_guard": "No SA-specific numeric ratio cutoff is defined here; the claim is the ratio's predictive weight, not a threshold.",
+      "notes": "Reuses the INTERHEART citation already in the dataset. PRAJNA-APOBA1.",
+      "review_status": "proposed",
+      "sources": [
+        {
+          "label": "Risk factors for early MI in South Asians (INTERHEART, JAMA 2007)",
+          "url": "https://doi.org/10.1001/jama.297.3.286",
+          "ref": "DOI:10.1001/jama.297.3.286",
+          "kind": "primaryStudy",
+          "in_registry": true
+        }
+      ]
+    },
+    {
+      "id": "hypothyroidism-screening-emphasis",
+      "analyte": "TSH / hypothyroidism (screening emphasis)",
+      "loinc": "3016-3",
+      "unit": "mIU/L",
+      "population": "south_asian",
+      "sex": "any",
+      "age": {
+        "min": 18,
+        "max": null
+      },
+      "measure_type": "reference_range",
+      "sa_value": {
+        "low": 0.4,
+        "high": 4.0,
+        "guidance": "Reference range unchanged; the SA-relevant point is high hypothyroidism prevalence in Indian adults, supporting a lower threshold to check TSH."
+      },
+      "general_value": {
+        "low": 0.4,
+        "high": 4.0
+      },
+      "direction_of_risk": "high",
+      "provenance_tier": "study-derived",
+      "evidence_grade": null,
+      "overclaim_guard": "Not a redefined range — a prevalence-driven screening emphasis; do not present a different TSH normal range for SA.",
+      "notes": "Unnikrishnan, Indian thyroid epidemiology. Soft/borderline candidate. TSH LOINC 3016-3.",
+      "review_status": "proposed",
+      "sources": [
+        {
+          "label": "Prevalence of hypothyroidism in adults: epidemiological study in eight cities of India (Unnikrishnan et al., Indian J Endocrinol Metab 2013)",
+          "url": "https://doi.org/10.4103/2230-8210.113755",
+          "ref": "DOI:10.4103/2230-8210.113755; PMID:23961480; PMCID:PMC3743364",
+          "kind": "primaryStudy",
+          "in_registry": false
+        }
+      ]
     }
   ]
 }

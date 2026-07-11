@@ -6,7 +6,7 @@
       {
         "system": "https://masalahealth.co/dataset",
         "code": "open-masala-ancestry-reference-ranges",
-        "display": "Open Masala ancestry-adjusted reference ranges 0.0.1"
+        "display": "Open Masala ancestry-adjusted reference ranges 0.1.0"
       }
     ]
   },
@@ -1515,6 +1515,1749 @@
               {
                 "url": "in-registry",
                 "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "triglycerides-risk-enhancer",
+        "code": {
+          "text": "Triglycerides (risk-enhancer threshold)",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2571-8"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "risk_flag"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "guideline-endorsed"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "The 175 mg/dL cut is not SA-specific; the SA-relevant point is that atherogenic dyslipidemia (high TG + low HDL) reaches it often even at a normal LDL-C."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "2018 AHA/ACC/Multi-Society Blood Cholesterol Guideline"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1161/CIR.0000000000000625"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1161/CIR.0000000000000625"
+              },
+              {
+                "url": "kind",
+                "valueString": "guideline"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "hscrp-risk-enhancer",
+        "code": {
+          "text": "hs-CRP (risk-enhancer threshold)",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "30522-7"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "risk_flag"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "guideline-endorsed"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "The >=2 mg/L cut is not SA-specific; SA users more often exceed it due to higher visceral adiposity at the same BMI."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "2018 AHA/ACC/Multi-Society Blood Cholesterol Guideline"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1161/CIR.0000000000000625"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1161/CIR.0000000000000625"
+              },
+              {
+                "url": "kind",
+                "valueString": "guideline"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "sa-ancestry-ascvd-risk-enhancer",
+        "code": {
+          "text": "South Asian ancestry (ASCVD risk-enhancing factor)"
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "interpretation_caveat"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "guideline-endorsed"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "A risk-enhancer is not a risk multiplier; it does not by itself diagnose disease or mandate a statin \u2014 it shifts the borderline decision."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "2018 AHA/ACC/Multi-Society Blood Cholesterol Guideline"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1161/CIR.0000000000000625"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1161/CIR.0000000000000625"
+              },
+              {
+                "url": "kind",
+                "valueString": "guideline"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "sa-very-high-risk-lipid-targets",
+        "code": {
+          "text": "LDL-C / non-HDL-C (SA very-high-risk targets)",
+          "coding": [
+            {
+              "system": "https://masalahealth.co/loinc-synthetic",
+              "code": "PRAJNA-NONHDL"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "interpretation_caveat"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "study-derived"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "LAI targets are risk-stratified; do not present a single cutoff as applying to all SA users. LDL-C <70 matches general very-high-risk guidance; the SA-specific piece is the tighter non-HDL target."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Lipid Association of India SA lipid targets (Enas 2013)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3868060/"
+              },
+              {
+                "url": "ref",
+                "valueString": "PMCID:PMC3868060"
+              },
+              {
+                "url": "kind",
+                "valueString": "consensus"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "NLA \u2014 Prevention of ASCVD in South Asians (2021)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1016/j.jacl.2021.03.007"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1016/j.jacl.2021.03.007"
+              },
+              {
+                "url": "kind",
+                "valueString": "consensus"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "bmi-masld-screening-threshold",
+        "code": {
+          "text": "BMI (MASLD / fatty-liver screening trigger)",
+          "coding": [
+            {
+              "system": "https://masalahealth.co/loinc-synthetic",
+              "code": "PRAJNA-BMI"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "screening_threshold"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "guideline-endorsed"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "A lower screening BMI reflects earlier ectopic-fat accumulation, not a different disease; MASLD is diagnosed by imaging/enzymes, not by BMI alone."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Multi-society Delphi consensus statement on new fatty liver disease nomenclature (MASLD) (Rinella et al., 2023)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1097/HEP.0000000000000520"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1097/HEP.0000000000000520"
+              },
+              {
+                "url": "kind",
+                "valueString": "consensus"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Ectopic fat depots and coronary artery calcium in South Asians vs other ethnic groups (Garg et al., JAHA 2016)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://pubmed.ncbi.nlm.nih.gov/27856485/"
+              },
+              {
+                "url": "ref",
+                "valueString": "PMID:27856485"
+              },
+              {
+                "url": "kind",
+                "valueString": "primaryStudy"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "score2-south-asian-multiplier",
+        "code": {
+          "text": "SCORE2 10-year CVD risk (South Asian multiplier)",
+          "coding": [
+            {
+              "system": "https://masalahealth.co/loinc-synthetic",
+              "code": "PRAJNA-PREVENT"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 40,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "interpretation_caveat"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "guideline-endorsed"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "The multiplier applies to SCORE2 specifically (derived from QRISK3 data); do not transplant it onto PREVENT or the Pooled Cohort Equations, which have no validated SA multiplier."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "2021 ESC Guidelines on cardiovascular disease prevention in clinical practice"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1093/eurheartj/ehab484"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1093/eurheartj/ehab484"
+              },
+              {
+                "url": "kind",
+                "valueString": "guideline"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "cac-south-asian-percentiles",
+        "code": {
+          "text": "Coronary artery calcium (South Asian age/sex percentiles)",
+          "coding": [
+            {
+              "system": "https://masalahealth.co/loinc-synthetic",
+              "code": "PRAJNA-CAC"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 40,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "reference_range"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "study-derived"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "These are cohort percentiles (MASALA+DILWALE), not a guideline threshold; CAC=0 remains reassuring at age 50 (55% of men, 80% of women) but less so at 70."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "South Asian coronary artery calcium age/sex percentiles \u2014 MASALA + DILWALE (Tasdighi et al., JACC Advances 2025)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://pubmed.ncbi.nlm.nih.gov/40402122/"
+              },
+              {
+                "url": "ref",
+                "valueString": "PMID:40402122"
+              },
+              {
+                "url": "kind",
+                "valueString": "primaryStudy"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "remnant-cholesterol-sa-marker",
+        "code": {
+          "text": "Remnant cholesterol (optional atherogenic marker)",
+          "coding": [
+            {
+              "system": "https://masalahealth.co/loinc-synthetic",
+              "code": "PRAJNA-REMNANT"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "risk_flag"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "study-derived"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "Explicitly not a guideline cutoff; the top MASALA quartile (>=~33 mg/dL) was associated with incident CAC, not CAC progression. Present as exploratory. Calculate as total cholesterol - HDL-C - LDL-C."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Remnant cholesterol and incident coronary artery calcium in South Asians \u2014 MASALA (Manghis et al., J Clin Lipidol 2025)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://pubmed.ncbi.nlm.nih.gov/41168049/"
+              },
+              {
+                "url": "ref",
+                "valueString": "PMID:41168049"
+              },
+              {
+                "url": "kind",
+                "valueString": "primaryStudy"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "apol1-not-south-asian",
+        "code": {
+          "text": "APOL1 kidney-risk variants (ancestry misattribution)"
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "General population"
+              }
+            ],
+            "condition": "deprecated_adjustment"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "contested-deprecated"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "This row exists to instruct consumers NOT to use APOL1 in a South Asian risk model; including it would be a false-ancestry-attribution error."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "APOL1 kidney-risk variants are West-African ancestry\u2013specific (review)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5495568/"
+              },
+              {
+                "url": "ref",
+                "valueString": "PMCID:PMC5495568"
+              },
+              {
+                "url": "kind",
+                "valueString": "primaryStudy"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "aldh2-adh1b-not-south-asian",
+        "code": {
+          "text": "ALDH2*2 / ADH1B*2 alcohol-flush variants (ancestry misattribution)"
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "General population"
+              }
+            ],
+            "condition": "deprecated_adjustment"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "contested-deprecated"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "This row exists to instruct consumers NOT to apply East-Asian alcohol-metabolism genetics to South Asians."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "ALDH2*2 / ADH1B*2 alcohol-metabolism variants are predominantly East Asian (review)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10594868/"
+              },
+              {
+                "url": "ref",
+                "valueString": "PMCID:PMC10594868"
+              },
+              {
+                "url": "kind",
+                "valueString": "primaryStudy"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "vitamin-b12-screening-emphasis",
+        "code": {
+          "text": "Vitamin B12 (screening emphasis)",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2132-9"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "range": {
+              "low": {
+                "value": 200,
+                "unit": "pg/mL"
+              },
+              "high": {
+                "value": 900,
+                "unit": "pg/mL"
+              }
+            },
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "reference_range"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "study-derived"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "The reference range is not SA-specific; the SA-relevant point is high deficiency prevalence in vegetarian South Asians, warranting screening \u2014 not a different normal range."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Hyperhomocysteinemia & cobalamin (B12) deficiency in Asian Indians (Refsum et al., Am J Clin Nutr 2001)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1093/ajcn/74.2.233"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1093/ajcn/74.2.233; PMID:11470726"
+              },
+              {
+                "url": "kind",
+                "valueString": "primaryStudy"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Vitamin B12 deficiency & hyperhomocysteinemia in rural and urban Indians (Yajnik et al., JAPI 2006)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://pubmed.ncbi.nlm.nih.gov/17214273/"
+              },
+              {
+                "url": "ref",
+                "valueString": "PMID:17214273"
+              },
+              {
+                "url": "kind",
+                "valueString": "primaryStudy"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "thalassemia-carrier-screening",
+        "code": {
+          "text": "Thalassemia / hemoglobinopathy carrier screening",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "30428-7"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "interpretation_caveat"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "guideline-endorsed"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "A carrier trait is not a disease; screening informs reproductive counseling and explains a spuriously altered HbA1c \u2014 it is not a diagnosis."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "ACOG Practice Bulletin No. 78: Hemoglobinopathies in Pregnancy (Obstet Gynecol 2007)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1097/00006250-200701000-00055"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1097/00006250-200701000-00055; PMID:17197616"
+              },
+              {
+                "url": "kind",
+                "valueString": "guideline"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "normal-alt-masld-caveat",
+        "code": {
+          "text": "ALT (MASLD interpretation caveat)",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "1742-6"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "interpretation_caveat"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "study-derived"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "ALT is not universally unreliable; the point is that a normal value is insufficient to rule out fatty liver in a high-metabolic-risk SA profile."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Proportion of NAFLD/MASLD patients with normal ALT: systematic review & meta-analysis (BMC Gastroenterol 2020)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1186/s12876-020-1165-z"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1186/s12876-020-1165-z; PMID:31937252; PMCID:PMC6961232"
+              },
+              {
+                "url": "kind",
+                "valueString": "primaryStudy"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "benign-ethnic-neutropenia",
+        "code": {
+          "text": "WBC / neutrophils (benign ethnic neutropenia)",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "interpretation_caveat"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "study-derived"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "Benign ethnic neutropenia is best-established for African ancestry; the South Asian evidence base is thinner \u2014 flag it as a possibility, not a rule."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Benign ethnic neutropenia (Atallah-Yunes et al., Blood Rev 2019)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1016/j.blre.2019.06.003"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1016/j.blre.2019.06.003; PMID:31255364; PMCID:PMC6702066"
+              },
+              {
+                "url": "kind",
+                "valueString": "primaryStudy"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "slco1b1-statin-pgx",
+        "code": {
+          "text": "SLCO1B1 rs4149056 (statin pharmacogenomics)"
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "interpretation_caveat"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "guideline-endorsed"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "The recommendation is genotype-guided statin selection, not SA-specific dosing; there is no SA-specific dosing table."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "CPIC Guideline for SLCO1B1/ABCG2/CYP2C9 & statin-associated musculoskeletal symptoms (Clin Pharmacol Ther 2022)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1002/cpt.2557"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1002/cpt.2557; PMID:35152405; PMCID:PMC9035072"
+              },
+              {
+                "url": "kind",
+                "valueString": "guideline"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "pediatric-bmi-iap",
+        "code": {
+          "text": "Pediatric BMI (IAP South Asian cut-offs)",
+          "coding": [
+            {
+              "system": "https://masalahealth.co/loinc-synthetic",
+              "code": "PRAJNA-BMI"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 5,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              },
+              "high": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "reference_range"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "guideline-endorsed"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "These are cardiometabolic-risk-adjusted centiles on IAP 2015 charts; under-5 growth still follows WHO international standards regardless of ethnicity."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Revised IAP 2015 growth charts / BMI cut-offs for 5-18y Indian children (Khadilkar et al., Indian J Endocrinol Metab 2015)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.4103/2230-8210.159028"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.4103/2230-8210.159028; PMID:26180761; PMCID:PMC4481652"
+              },
+              {
+                "url": "kind",
+                "valueString": "guideline"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "lean-diabetes-phenotype",
+        "code": {
+          "text": "Diabetes risk at low BMI (lean-diabetes phenotype)",
+          "coding": [
+            {
+              "system": "https://masalahealth.co/loinc-synthetic",
+              "code": "PRAJNA-BMI"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "interpretation_caveat"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "study-derived"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "Lean diabetes reflects reduced \u03b2-cell function / 'thin-fat' body composition, not the absence of metabolic risk; a normal BMI is not reassurance."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Young-onset diabetes in Asian Indians linked to lower beta-cell function (INSPIRED; Diabetologia 2022)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1007/s00125-022-05671-z"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1007/s00125-022-05671-z; PMID:35247066; PMCID:PMC9076730"
+              },
+              {
+                "url": "kind",
+                "valueString": "primaryStudy"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "gdm-early-screening",
+        "code": {
+          "text": "Gestational diabetes (early screening in SA)"
+        },
+        "qualifiedInterval": [
+          {
+            "gender": "female",
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              },
+              "high": {
+                "value": 50,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "interpretation_caveat"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "guideline-endorsed"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "The diagnostic thresholds are unchanged; the SA-specific action is earlier screening, not a different cutoff."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "IADPSG recommendations on diagnosis & classification of hyperglycemia in pregnancy (Diabetes Care 2010)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.2337/dc09-1848"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.2337/dc09-1848; PMID:20190296; PMCID:PMC2827530"
+              },
+              {
+                "url": "kind",
+                "valueString": "consensus"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": false
+              }
+            ]
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Diagnosis and Classification of Diabetes: Standards of Care in Diabetes\u20142024"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.2337/dc24-S002"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.2337/dc24-S002"
+              },
+              {
+                "url": "kind",
+                "valueString": "guideline"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "menopause-age-sa",
+        "code": {
+          "text": "Age at natural menopause (South Asian women)"
+        },
+        "qualifiedInterval": [
+          {
+            "gender": "female",
+            "age": {
+              "low": {
+                "value": 40,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "reference_range"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "study-derived"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "Cohort estimate (n=405); earlier menopause raises cardiometabolic risk earlier but is not itself a disease."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Menopausal experience (hot flashes, urinary incontinence, mood) among South Asian American women \u2014 MASALA (Lyu et al., Climacteric 2025)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1080/13697137.2025.2480584"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1080/13697137.2025.2480584; PMID:40177961; PMCID:PMC12353937"
+              },
+              {
+                "url": "kind",
+                "valueString": "primaryStudy"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "parity-cardiometabolic-sa",
+        "code": {
+          "text": "Parity (cardiometabolic effect, SA women)"
+        },
+        "qualifiedInterval": [
+          {
+            "gender": "female",
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "interpretation_caveat"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "study-derived"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "Association from MASALA (n~415); parity is a risk-context flag, not a screening threshold."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Association of Parity With ASCVD Risk Factors Among South Asian Women \u2014 MASALA (Mehta et al., JACC Advances 2026)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1016/j.jacadv.2026.102647"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1016/j.jacadv.2026.102647"
+              },
+              {
+                "url": "kind",
+                "valueString": "primaryStudy"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "mthfr-not-sa-variant",
+        "code": {
+          "text": "MTHFR C677T as an 'SA variant' (misattribution)"
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "General population"
+              }
+            ],
+            "condition": "deprecated_adjustment"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "contested-deprecated"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "Credibility-showcase 'do-not-apply' row: the actionable target is B12 status, not MTHFR genotyping."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Hyperhomocysteinemia & cobalamin (B12) deficiency in Asian Indians (Refsum et al., Am J Clin Nutr 2001)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1093/ajcn/74.2.233"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1093/ajcn/74.2.233; PMID:11470726"
+              },
+              {
+                "url": "kind",
+                "valueString": "primaryStudy"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "apob-apoa1-ratio",
+        "code": {
+          "text": "ApoB/ApoA-I ratio (lead SA atherogenic metric)",
+          "coding": [
+            {
+              "system": "https://masalahealth.co/loinc-synthetic",
+              "code": "PRAJNA-APOBA1"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "interpretation_caveat"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "study-derived"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "No SA-specific numeric ratio cutoff is defined here; the claim is the ratio's predictive weight, not a threshold."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Risk factors for early MI in South Asians (INTERHEART, JAMA 2007)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.1001/jama.297.3.286"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.1001/jama.297.3.286"
+              },
+              {
+                "url": "kind",
+                "valueString": "primaryStudy"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "hypothyroidism-screening-emphasis",
+        "code": {
+          "text": "TSH / hypothyroidism (screening emphasis)",
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "3016-3"
+            }
+          ]
+        },
+        "qualifiedInterval": [
+          {
+            "range": {
+              "low": {
+                "value": 0.4,
+                "unit": "mIU/L"
+              },
+              "high": {
+                "value": 4.0,
+                "unit": "mIU/L"
+              }
+            },
+            "age": {
+              "low": {
+                "value": 18,
+                "unit": "years",
+                "system": "http://unitsofmeasure.org",
+                "code": "a"
+              }
+            },
+            "appliesTo": [
+              {
+                "text": "South Asian"
+              }
+            ],
+            "condition": "reference_range"
+          }
+        ],
+        "extension": [
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/provenance-tier",
+            "valueString": "study-derived"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/evidence-grade",
+            "valueString": "ungraded"
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/overclaim-guard",
+            "valueString": "Not a redefined range \u2014 a prevalence-driven screening emphasis; do not present a different TSH normal range for SA."
+          },
+          {
+            "url": "https://masalahealth.co/fhir/StructureDefinition/source",
+            "extension": [
+              {
+                "url": "label",
+                "valueString": "Prevalence of hypothyroidism in adults: epidemiological study in eight cities of India (Unnikrishnan et al., Indian J Endocrinol Metab 2013)"
+              },
+              {
+                "url": "url",
+                "valueString": "https://doi.org/10.4103/2230-8210.113755"
+              },
+              {
+                "url": "ref",
+                "valueString": "DOI:10.4103/2230-8210.113755; PMID:23961480; PMCID:PMC3743364"
+              },
+              {
+                "url": "kind",
+                "valueString": "primaryStudy"
+              },
+              {
+                "url": "in-registry",
+                "valueBoolean": false
               }
             ]
           }

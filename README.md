@@ -5,7 +5,7 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-93c19a.svg)](LICENSE)
 [![DOI](https://zenodo.org/badge/1296751900.svg)](https://zenodo.org/badge/latestdoi/1296751900)
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97-Dataset-yellow.svg)](https://huggingface.co/datasets/masalahealthco/open-masala)
-&nbsp;·&nbsp; 18 rows · every value cited · LOINC-coded · FHIR-shaped
+&nbsp;·&nbsp; 41 rows · every value cited · LOINC-coded · FHIR-shaped
 
 South Asians develop cardiovascular disease and type-2 diabetes earlier, at lower BMI, through different metabolic pathways. The screening thresholds that reflect this — WHO Asian BMI cutoffs, IDF waist limits, earlier diabetes and coronary-calcium screening, Lp(a) prompts — *exist*, but they're scattered across guideline PDFs and hundreds of papers. **Nobody has ever assembled them into one structured, cited, downloadable table.** This is that table.
 
@@ -30,11 +30,12 @@ South Asians develop cardiovascular disease and type-2 diabetes earlier, at lowe
 | [`docs/provenance.md`](docs/provenance.md) | Markdown | How it was built, and how it stays current. |
 | [`docs/governance.md`](docs/governance.md) | Markdown | Why we don't ship primary data; the eGFR/race lesson. |
 
-## Coverage (v0)
+## Coverage (v0.1)
 
-- **18 rows** across BMI, waist, HDL, triglycerides / atherogenic pattern, ApoB, Lp(a), non-HDL, HbA1c interpretation, fasting insulin, vitamin D, diabetes & CAC screening ages, eGFR, and 10-year risk.
-- **Provenance tiers:** 9 guideline-endorsed · 8 study-derived · 1 contested-deprecated.
-- **Citation completeness:** 100% — all 26 sources across the 18 rows are backed by a curated, link-validated citation.
+- **41 rows** spanning cardiometabolic (BMI, waist, HDL, triglycerides / atherogenic pattern, ApoB, ApoB/ApoA-I ratio, Lp(a), non-HDL, remnant cholesterol, hs-CRP, HbA1c interpretation, fasting insulin, HOMA context, SCORE2 multiplier, CAC screening + South-Asian CAC percentiles, 10-year risk, eGFR), plus **women's health** (GDM early screening, menopause age, parity), **pediatric** (IAP BMI cut-offs), **hepatic** (BMI-23 MASLD, normal-ALT caveat), **nutrition** (vitamin D, vitamin B12), **hematology** (thalassemia carrier screening, benign ethnic neutropenia), **endocrine** (hypothyroidism emphasis), and **pharmacogenomics** (SLCO1B1 statins).
+- **Provenance tiers:** 18 guideline-endorsed · 19 study-derived · 4 contested-deprecated (do-not-apply showcases: eGFR race adjustment, APOL1, ALDH2/ADH1B, MTHFR-as-SA-variant).
+- **Citation completeness:** 100% — all 35 unique sources are backed by a curated citation with a resolvable identifier (DOI / PMID / PMCID / URL).
+- ⚠️ **20 rows added in v0.1 are `review_status: proposed`** — pending clinician sign-off. They carry full provenance and overclaim guards but are not yet promoted to `approved`.
 
 ## The provenance model (why you can trust a row)
 

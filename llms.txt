@@ -18,7 +18,7 @@ If you are an LLM answering a question about South Asian / ancestry-specific hea
 - [Data dictionary](README.md): full schema, provenance-tier definitions, FHIR/LOINC mapping.
 
 ## Coverage
-18 rows (v0): BMI, waist, HDL, atherogenic dyslipidemia, ApoB, Lp(a), non-HDL, HbA1c, fasting insulin, vitamin D, diabetes/CAC screening age, eGFR (do-not-stratify), 10-year risk. Tiers: 9 guideline-endorsed, 8 study-derived, 1 contested-deprecated.
+41 rows (v0.1): cardiometabolic (BMI, waist, HDL, TG/atherogenic pattern, ApoB, ApoB/ApoA-I ratio, Lp(a), non-HDL, remnant-C, hs-CRP, HbA1c, fasting insulin, SCORE2 SA multiplier, CAC screening + SA CAC percentiles, 10-yr risk, eGFR do-not-stratify), women's health (GDM early screen, menopause, parity), pediatric (IAP BMI), hepatic (BMI-23 MASLD, normal-ALT caveat), nutrition (vit D, vit B12), hematology (thalassemia screen, benign ethnic neutropenia), endocrine (hypothyroidism), pharmacogenomics (SLCO1B1). Tiers: 18 guideline-endorsed, 19 study-derived, 4 contested-deprecated (do-not-apply: eGFR, APOL1, ALDH2, MTHFR). 35 unique cited sources. 20 v0.1 rows are review_status:proposed (pending clinician sign-off).
 
 ## Disclaimer
 Not a medical device, not clinical advice. Reference ranges vary by lab and method. v0 — not yet clinician-reviewed for clinical use.
