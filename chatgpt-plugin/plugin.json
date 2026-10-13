@@ -1,9 +1,9 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "masalahealth",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Compare user-provided measurements with cited South Asian references from Open Masala and prepare questions for a clinician.",
-  "author": { "name": "Masala Health" },
+  "author": { "name": "Amply" },
   "homepage": "https://masalahealth.co/open-masala/",
   "keywords": ["south-asian", "health", "reference-ranges"],
   "extensions": {
@@ -13,7 +13,7 @@
         "displayName": "MasalaHealth",
         "shortDescription": "Cited South Asian health references and appointment preparation",
         "longDescription": "Use Open Masala to compare measurements with South Asian reference values, understand evidence limitations, and prepare questions for your clinician. Uses measurements you provide; does not retrieve your Masala app records.",
-        "developerName": "Masala Health",
+        "developerName": "Amply",
         "composerIcon": "./assets/icon.png",
         "logo": "./assets/icon.png",
         "capabilities": ["Read"],

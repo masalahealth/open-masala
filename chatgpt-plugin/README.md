@@ -1,6 +1,6 @@
 # MasalaHealth plugin — private prototype
 
-Version 0.1.0 connects to the hosted Open Masala MCP at https://masalahealth-mcp.neilshahis.workers.dev/mcp. It supports user-provided lab comparisons, evidence explanations, and clinician-question preparation. Its tool behavior comes from the existing Python MCP version 0.0.3. No personal-record/recovery tools are exposed.
+Version 0.1.1 connects to the hosted Open Masala MCP at https://masalahealth-mcp.neilshahis.workers.dev/mcp. It supports user-provided lab comparisons, evidence explanations, and clinician-question preparation. Its tool behavior comes from the existing Python MCP version 0.0.3. No personal-record/recovery tools are exposed.
 
 ## Build
 
@@ -41,3 +41,7 @@ Record tool calls, inputs, source links, output, and errors for each case after 
 | Connection unavailable | State incomplete connection; no fabricated comparison. |
 
 Before using real measurements, verify the host's data handling and that the server deployment preserves the inspected stateless design. Source code alone does not establish infrastructure logging or retention behavior.
+
+## Publisher identity
+
+The package declares Amply in both `author.name` and `extensions.com.openai.interface.developerName`. The personal cloud prototype displayed the uploading account name despite the original package declaring Masala Health. Public directory names come from the selected verified developer identity; publish under an Amply business identity to display that company name. Changing package metadata alone does not verify a business or change account ownership.
