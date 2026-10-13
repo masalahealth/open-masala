@@ -4,12 +4,12 @@ Version 0.1.0 connects to the hosted Open Masala MCP at https://masalahealth-mcp
 
 ## Build
 
-`python3 plugins/masalahealth/build.py` produces a remote plugin ZIP in `dist/`. Users do not need a local MCP process. The live endpoint passed MCP initialization, six-tool discovery, guidance resource reading, and synthetic reference evaluation checks on 2026-10-13. This is separate from installation and conversation testing inside ChatGPT.
+`python3 chatgpt-plugin/build.py` produces a remote plugin ZIP in `dist/`. Users do not need a local MCP process. The live endpoint passed MCP initialization, six-tool discovery, guidance resource reading, and synthetic reference evaluation checks on 2026-10-13. This is separate from installation and conversation testing inside ChatGPT.
 
 For a confirmed hosted **public reference-only Open Masala server**, use:
 
 ```sh
-python3 plugins/masalahealth/build.py --mcp-url https://YOUR-HOST/mcp
+python3 chatgpt-plugin/build.py --mcp-url https://YOUR-HOST/mcp
 ```
 
 The remote package declares no authentication because this server serves public reference data and has no account records. Do not use this configuration for a personal-data MCP. A personal-data service needs separate tool contracts, authorization, and workflow instructions. Do not embed bearer tokens or OAuth client secrets in a package.

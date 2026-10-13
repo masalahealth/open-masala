@@ -23,6 +23,8 @@ Tests compare clinical output and metadata against 394 cases generated from the 
 
 ## Deploy
 
+The private prototype is live at https://masalahealth-mcp.neilshahis.workers.dev/mcp. See DEPLOYMENT.md for the deployed version and live verification. Current deployment uses restricted Wrangler authorization; GitHub CI verifies changes but does not automatically deploy them.
+
 Connect this repository through Cloudflare Workers Builds. Select the deployment branch, set the root directory to `cloudflare-mcp`, use `npm ci && npm test && npm run build` as the build command, and `npx wrangler deploy` as the deploy command. The configuration creates `masalahealth-mcp` on the existing account's `workers.dev` subdomain and requires no paid bindings.
 
 Alternatively, authenticate Wrangler and run `npm run deploy`. Keep credentials out of Git and plugin packages. Free-plan CPU limits must be verified on the deployed endpoint under representative traffic; successful development tests alone do not prove capacity.
