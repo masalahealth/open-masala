@@ -17,4 +17,4 @@ Repeat live checks from this folder with:
 node test/verify-remote.js https://masalahealth-mcp.neilshahis.workers.dev/mcp
 ```
 
-The `chatgpt-plugin` folder contains the hosted plugin package and workflow skills. Build its remote ZIP with `python3 chatgpt-plugin/build.py` from the repository root. Private ChatGPT installation/conversation testing and public publication are separate from hosting.
+The `chatgpt-plugin` folder contains the hosted plugin package and workflow skills. Build its remote ZIP with `python3 chatgpt-plugin/build.py` from the repository root. The archive was successfully uploaded as a personal ChatGPT cloud plugin, and its page displays one MCP server and two skills. Final desktop enablement and conversation testing remain unverified: the computer-use tool blocks controls for the ChatGPT desktop app. Public directory publication is separate.
