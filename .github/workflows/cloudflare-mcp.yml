@@ -1,0 +1,26 @@
+name: Verify hosted MCP
+on:
+  push:
+    paths: ['cloudflare-mcp/**', '.github/workflows/cloudflare-mcp.yml', 'mcp-server/open_masala_mcp/data/**']
+  pull_request:
+    paths: ['cloudflare-mcp/**', '.github/workflows/cloudflare-mcp.yml', 'mcp-server/open_masala_mcp/data/**']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: cloudflare-mcp
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: cloudflare-mcp/package-lock.json
+      - run: cmp src/dataset.json ../mcp-server/open_masala_mcp/data/ancestry-reference-ranges.v0.json
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - run: npx wrangler deploy --dry-run
